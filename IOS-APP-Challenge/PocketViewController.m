@@ -42,7 +42,7 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 9;
+    return 5;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PocketViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PocketViewCell" forIndexPath:indexPath];
