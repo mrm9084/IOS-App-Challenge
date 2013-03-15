@@ -1,14 +1,14 @@
 //
-//  ColorViewCell.m
+//  colorViewCell.m
 //  IOS-APP-Challenge
 //
 //  Created by Mentor on 3/15/13.
 //  Copyright (c) 2013 Mentor. All rights reserved.
 //
 
-#import "ColorViewCell.h"
+#import "colorViewCell.h"
 
-@implementation ColorViewCell
+@implementation colorViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
