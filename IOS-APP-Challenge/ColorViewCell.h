@@ -1,5 +1,5 @@
 //
-//  ColorViewCell.h
+//  colorViewCell.h
 //  IOS-APP-Challenge
 //
 //  Created by Mentor on 3/15/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *ImageView;
+@interface colorViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ClothingViewController : UIViewController <UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UICollectionView *colorcolectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *patterncollectionView;
 
 @end

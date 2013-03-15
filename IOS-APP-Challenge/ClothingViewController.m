@@ -7,6 +7,8 @@
 //
 
 #import "ClothingViewController.h"
+#import "ColorViewCell.h"
+#import "PocketViewCell.h"
 
 @interface ClothingViewController ()
 
@@ -27,8 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.colorcolectionView.dataSource = self;
-    self.patterncollectionView.dataSource = self;
+    self.collectionView.dataSource = self;
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,20 +47,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-        return 10;
-    
-    return 0;
+    return 10;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *color = [collectionView dequeueReusableCellWithReuseIdentifier:@"color" forIndexPath:indexPath];
-    UICollectionViewCell *pattern = [collectionView dequeueReusableCellWithReuseIdentifier:@"pattern" forIndexPath:indexPath];
+    ColorViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ColorView" forIndexPath:indexPath];
+ 
     
-    color.backgroundColor = [UIColor blackColor];
-    pattern.backgroundColor = [UIColor blueColor];
+    cell.backgroundColor = [UIColor blackColor];
+   
     
-    return color, pattern;
+    return cell;
 }
 
 

@@ -57,10 +57,7 @@
 		F3DB0A1E16F2CA3B00AFD737 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DB0A1D16F2CA3B00AFD737 /* Icon.png */; };
 		F3DB0A2016F2CA3D00AFD737 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DB0A1F16F2CA3D00AFD737 /* Icon@2x.png */; };
 		F3DB0A2416F2CA4800AFD737 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DB0A2316F2CA4800AFD737 /* Icon-72.png */; };
-		F3DB0A2716F2CD2B00AFD737 /* ClothingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2616F2CD2B00AFD737 /* ClothingViewController.m */; };
-		F3DB0A2A16F2DBCF00AFD737 /* ColorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2916F2DBCF00AFD737 /* ColorViewCell.m */; };
-		F3DB0A2D16F2DBFA00AFD737 /* PatternViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2C16F2DBFA00AFD737 /* PatternViewCell.m */; };
-		FAC57DB216F3AB7200CD7F9B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DB116F3AB7200CD7F9B /* bg.png */; };
+		F3E22EDB16F3CD9D00F50EAB /* PickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E22EDA16F3CD9D00F50EAB /* PickViewController.m */; };
 		FAC57DB916F3AF6700CD7F9B /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */; };
 		FAC57DC716F3C33100CD7F9B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DC016F3C33000CD7F9B /* back.png */; };
 		FAC57DC816F3C33100CD7F9B /* bow1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DC116F3C33000CD7F9B /* bow1.png */; };
@@ -150,13 +147,8 @@
 		F3DB0A1D16F2CA3B00AFD737 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F3DB0A1F16F2CA3D00AFD737 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		F3DB0A2316F2CA4800AFD737 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		F3DB0A2516F2CD2B00AFD737 /* ClothingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothingViewController.h; sourceTree = "<group>"; };
-		F3DB0A2616F2CD2B00AFD737 /* ClothingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClothingViewController.m; sourceTree = "<group>"; };
-		F3DB0A2816F2DBCF00AFD737 /* ColorViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewCell.h; sourceTree = "<group>"; };
-		F3DB0A2916F2DBCF00AFD737 /* ColorViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewCell.m; sourceTree = "<group>"; };
-		F3DB0A2B16F2DBFA00AFD737 /* PatternViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternViewCell.h; sourceTree = "<group>"; };
-		F3DB0A2C16F2DBFA00AFD737 /* PatternViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternViewCell.m; sourceTree = "<group>"; };
-		FAC57DB116F3AB7200CD7F9B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../Desktop/white_carbonfiber/bg.png; sourceTree = "<group>"; };
+		F3E22ED916F3CD9D00F50EAB /* PickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickViewController.h; sourceTree = "<group>"; };
+		F3E22EDA16F3CD9D00F50EAB /* PickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickViewController.m; sourceTree = "<group>"; };
 		FAC57DB716F3AF6700CD7F9B /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
 		FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
 		FAC57DC016F3C33000CD7F9B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -208,6 +200,8 @@
 				5EE2CC3D16EEFE9F009E846C /* InfoPlist.strings */,
 				5EE2CC3016EEFE9F009E846C /* AppDelegate.m */,
 				5EE2CC3F16EEFE9F009E846C /* MainStoryboard.storyboard */,
+				F3E22ED916F3CD9D00F50EAB /* PickViewController.h */,
+				F3E22EDA16F3CD9D00F50EAB /* PickViewController.m */,
 				FAC57DB716F3AF6700CD7F9B /* NormalViewController.h */,
 				FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */,
 				F367070816F2E93D00F723F2 /* PocketViewCell.h */,
@@ -216,12 +210,6 @@
 				F367070616F2E91900F723F2 /* PocketViewController.m */,
 				F367070216F2E8EC00F723F2 /* BowTieViewCell.h */,
 				F367070316F2E8EC00F723F2 /* BowTieViewCell.m */,
-				F3DB0A2B16F2DBFA00AFD737 /* PatternViewCell.h */,
-				F3DB0A2C16F2DBFA00AFD737 /* PatternViewCell.m */,
-				F3DB0A2816F2DBCF00AFD737 /* ColorViewCell.h */,
-				F3DB0A2916F2DBCF00AFD737 /* ColorViewCell.m */,
-				F3DB0A2516F2CD2B00AFD737 /* ClothingViewController.h */,
-				F3DB0A2616F2CD2B00AFD737 /* ClothingViewController.m */,
 				F3705E6116F2BA4D00EB688B /* ScrollViewCell.h */,
 				F3705E6216F2BA4D00EB688B /* ScrollViewCell.m */,
 				F3705E6416F2BB1E00EB688B /* ScrollViewController.h */,
@@ -288,7 +276,6 @@
 				FAC57DC416F3C33100CD7F9B /* bow4.png */,
 				FAC57DC516F3C33100CD7F9B /* bow5.png */,
 				FAC57DC616F3C33100CD7F9B /* bow6.png */,
-				FAC57DB116F3AB7200CD7F9B /* bg.png */,
 				F367072816F30A0600F723F2 /* Icon-72@2x.png */,
 				F367072916F30A0600F723F2 /* tie1.gif */,
 				F367072A16F30A0600F723F2 /* tie2.gif */,
@@ -409,7 +396,6 @@
 				F367073E16F30A0700F723F2 /* tie8.gif in Resources */,
 				F367073F16F30A0700F723F2 /* tie9.gif in Resources */,
 				F3379C1716F30CB300F81D06 /* tie4.gif in Resources */,
-				FAC57DB216F3AB7200CD7F9B /* bg.png in Resources */,
 				FAC57DC716F3C33100CD7F9B /* back.png in Resources */,
 				FAC57DC816F3C33100CD7F9B /* bow1.png in Resources */,
 				FAC57DC916F3C33100CD7F9B /* bow2.png in Resources */,
@@ -447,14 +433,12 @@
 				F3705E6016F2B6B900EB688B /* SwipeViewController.m in Sources */,
 				F3705E6316F2BA4D00EB688B /* ScrollViewCell.m in Sources */,
 				F3705E6616F2BB1E00EB688B /* ScrollViewController.m in Sources */,
-				F3DB0A2716F2CD2B00AFD737 /* ClothingViewController.m in Sources */,
-				F3DB0A2A16F2DBCF00AFD737 /* ColorViewCell.m in Sources */,
-				F3DB0A2D16F2DBFA00AFD737 /* PatternViewCell.m in Sources */,
 				F367070116F2E8BD00F723F2 /* BowTieViewController.m in Sources */,
 				F367070416F2E8EC00F723F2 /* BowTieViewCell.m in Sources */,
 				F367070716F2E91900F723F2 /* PocketViewController.m in Sources */,
 				F367070A16F2E93D00F723F2 /* PocketViewCell.m in Sources */,
 				FAC57DB916F3AF6700CD7F9B /* NormalViewController.m in Sources */,
+				F3E22EDB16F3CD9D00F50EAB /* PickViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

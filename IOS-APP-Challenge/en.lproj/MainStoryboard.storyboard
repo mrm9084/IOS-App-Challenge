@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sW4-9h-gCx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sW4-9h-gCx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pSo-dm-g4d" kind="push" id="nwr-df-2bX"/>
+                                    <segue destination="pSo-dm-g4d" kind="push" id="vIv-qp-Vu1"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Icon-72@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-95-T9i">
@@ -133,100 +133,39 @@
             </objects>
             <point key="canvasLocation" x="143" y="-10"/>
         </scene>
-        <!--Clothing View Controller-->
+        <!--Pick View Controller-->
         <scene sceneID="A6C-fc-0rK">
             <objects>
-                <viewController id="pSo-dm-g4d" customClass="ClothingViewController" sceneMemberID="viewController">
+                <viewController id="pSo-dm-g4d" customClass="PickViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cZO-tY-ajs">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7De-eb-ucR">
-                                <color key="backgroundColor" red="1" green="0.049151788657596063" blue="0.0062168863265557039" alpha="1" colorSpace="calibratedRGB"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8r-iA-o7F">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="W1X-I9-9EW"/>
+                                    <constraint firstAttribute="height" constant="216" id="6Op-le-d79"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iuC-AE-w3V">
-                                    <size key="itemSize" width="65" height="65"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="color" id="Foo-L5-kxh" customClass="ColorViewCell">
-                                        <rect key="frame" x="0.0" y="14" width="65" height="65"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q73-xP-gXI"/>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="Q73-xP-gXI" firstAttribute="leading" secondItem="Foo-L5-kxh" secondAttribute="leading" type="default" id="Bzo-2F-ZSt"/>
-                                            <constraint firstItem="Q73-xP-gXI" firstAttribute="bottom" secondItem="Foo-L5-kxh" secondAttribute="bottom" type="default" id="Ica-Vc-zfZ"/>
-                                            <constraint firstItem="Q73-xP-gXI" firstAttribute="trailing" secondItem="Foo-L5-kxh" secondAttribute="trailing" type="default" id="Z8J-ud-KNv"/>
-                                            <constraint firstItem="Q73-xP-gXI" firstAttribute="top" secondItem="Foo-L5-kxh" secondAttribute="top" type="default" id="rDb-MH-bqb"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="ImageView" destination="Q73-xP-gXI" id="3wR-af-0j7"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-do-b6d">
-                                <color key="backgroundColor" red="0.93257980516303163" green="0.41628140406305825" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbq-GS-fXJ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="T41-1z-JTV"/>
+                                    <constraint firstAttribute="height" constant="216" id="lbV-Dn-ogV"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0bu-J6-Oke">
-                                    <size key="itemSize" width="65" height="65"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pattern" id="ogZ-fc-jDg" customClass="PatternViewCell">
-                                        <rect key="frame" x="0.0" y="8" width="65" height="65"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-WE-mRs"/>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="7kN-WE-mRs" firstAttribute="bottom" secondItem="ogZ-fc-jDg" secondAttribute="bottom" type="default" id="ETA-he-e3v"/>
-                                            <constraint firstItem="7kN-WE-mRs" firstAttribute="trailing" secondItem="ogZ-fc-jDg" secondAttribute="trailing" type="default" id="P6f-oI-6AH"/>
-                                            <constraint firstItem="7kN-WE-mRs" firstAttribute="top" secondItem="ogZ-fc-jDg" secondAttribute="top" type="default" id="QyI-yL-dA4"/>
-                                            <constraint firstItem="7kN-WE-mRs" firstAttribute="leading" secondItem="ogZ-fc-jDg" secondAttribute="leading" type="default" id="klT-J7-hMZ"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="ImageView" destination="7kN-WE-mRs" id="YWB-a5-7BE"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0qF-do-b6d" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="6sH-XL-Zv9"/>
-                            <constraint firstAttribute="bottom" secondItem="0qF-do-b6d" secondAttribute="bottom" constant="156" id="DA6-1g-Jq9"/>
-                            <constraint firstItem="7De-eb-ucR" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="EGN-zN-7j0"/>
-                            <constraint firstItem="0qF-do-b6d" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="HTP-xe-6Wr"/>
-                            <constraint firstItem="7De-eb-ucR" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="W0R-dc-KwJ"/>
-                            <constraint firstItem="7De-eb-ucR" firstAttribute="top" secondItem="cZO-tY-ajs" secondAttribute="top" constant="135" id="XT2-SX-XZY"/>
+                            <constraint firstItem="jbq-GS-fXJ" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="5ze-Je-3kq"/>
+                            <constraint firstItem="jbq-GS-fXJ" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="Gi6-fK-u2h"/>
+                            <constraint firstItem="r8r-iA-o7F" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="KVX-6M-yZt"/>
+                            <constraint firstAttribute="bottom" secondItem="jbq-GS-fXJ" secondAttribute="bottom" constant="10" id="X1h-eC-m2h"/>
+                            <constraint firstItem="r8r-iA-o7F" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="vX8-xX-3l5"/>
+                            <constraint firstItem="r8r-iA-o7F" firstAttribute="top" secondItem="cZO-tY-ajs" secondAttribute="top" constant="40" id="yws-GR-NdK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ViB-mH-2ha"/>
                     <connections>
-                        <outlet property="colorCollectionView" destination="7De-eb-ucR" id="afa-TG-sNF"/>
-                        <outlet property="colorcolectionView" destination="7De-eb-ucR" id="ifx-pJ-yNc"/>
-                        <outlet property="patterncollectionView" destination="0qF-do-b6d" id="9hX-fd-wha"/>
+                        <outlet property="patternView" destination="jbq-GS-fXJ" id="H1C-o6-UKl"/>
+                        <outlet property="pickerView" destination="r8r-iA-o7F" id="ZMO-gr-kKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-Rn-gCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,84 +469,6 @@
         <image name="Icon-72@2x.png" width="144" height="144"/>
         <image name="button.png" width="2780" height="450"/>
     </resources>
-    <classes>
-        <class className="BowTieViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BowTieViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="ClothingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClothingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="colorcolectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="patterncollectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="ColorViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PatternViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PatternViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="PocketViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PocketViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="ScrollViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ScrollViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="view" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
