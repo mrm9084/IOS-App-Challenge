@@ -57,14 +57,13 @@
                            [UIImage imageNamed:@"bow3.gif"],
                            [UIImage imageNamed:@"bow4.gif"],
                            [UIImage imageNamed:@"bow5.gif"],
-                           [UIImage imageNamed:@"bow6.gif"],
-                           [UIImage imageNamed:@"bow7.gif"],
+                           
                            nil];
     
     cell.TextView.text= textArray[indexPath.row];
     cell.ImageView.image = imageArray[indexPath.row];
-    cell.contentView.backgroundColor = [UIColor colorWithRed:0.44705882352941 green:0.48235294117647 blue:0.54901960784314 alpha:1];
-    return cell;
+    cell.ImageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];
+    cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];    return cell;
 }
 
 #pragma mark - UICollectionView Deleate

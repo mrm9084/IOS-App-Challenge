@@ -66,6 +66,11 @@
 		FAC57DAB16F3A48500CD7F9B /* bow4.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA516F3A48500CD7F9B /* bow4.png */; };
 		FAC57DAC16F3A48500CD7F9B /* bow5.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA616F3A48500CD7F9B /* bow5.png */; };
 		FAC57DAD16F3A48500CD7F9B /* bow6.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA716F3A48500CD7F9B /* bow6.png */; };
+		FAC57DB016F3A8E100CD7F9B /* bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DAF16F3A8E100CD7F9B /* bkg.png */; };
+		FAC57DB216F3AB7200CD7F9B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DB116F3AB7200CD7F9B /* bg.png */; };
+		FAC57DB416F3AB8300CD7F9B /* bk.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DB316F3AB8300CD7F9B /* bk.png */; };
+		FAC57DB616F3AC8C00CD7F9B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DB516F3AC8C00CD7F9B /* back.png */; };
+		FAC57DB916F3AF6700CD7F9B /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +164,12 @@
 		FAC57DA516F3A48500CD7F9B /* bow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow4.png; path = ../Desktop/attachments/bow4.png; sourceTree = "<group>"; };
 		FAC57DA616F3A48500CD7F9B /* bow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow5.png; path = ../Desktop/attachments/bow5.png; sourceTree = "<group>"; };
 		FAC57DA716F3A48500CD7F9B /* bow6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow6.png; path = ../Desktop/attachments/bow6.png; sourceTree = "<group>"; };
+		FAC57DAF16F3A8E100CD7F9B /* bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bkg.png; path = ../Desktop/honey_im_subtle/bkg.png; sourceTree = "<group>"; };
+		FAC57DB116F3AB7200CD7F9B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../Desktop/white_carbonfiber/bg.png; sourceTree = "<group>"; };
+		FAC57DB316F3AB8300CD7F9B /* bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bk.png; path = ../Desktop/subtle_surface/bk.png; sourceTree = "<group>"; };
+		FAC57DB516F3AC8C00CD7F9B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../Desktop/fabric_plaid/back.png; sourceTree = "<group>"; };
+		FAC57DB716F3AF6700CD7F9B /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +212,8 @@
 				5EE2CC3D16EEFE9F009E846C /* InfoPlist.strings */,
 				5EE2CC3016EEFE9F009E846C /* AppDelegate.m */,
 				5EE2CC3F16EEFE9F009E846C /* MainStoryboard.storyboard */,
+				FAC57DB716F3AF6700CD7F9B /* NormalViewController.h */,
+				FAC57DB816F3AF6700CD7F9B /* NormalViewController.m */,
 				F367070816F2E93D00F723F2 /* PocketViewCell.h */,
 				F367070916F2E93D00F723F2 /* PocketViewCell.m */,
 				F367070516F2E91900F723F2 /* PocketViewController.h */,
@@ -277,18 +290,22 @@
 				FAC57DA416F3A48500CD7F9B /* bow3.png */,
 				FAC57DA516F3A48500CD7F9B /* bow4.png */,
 				FAC57DA616F3A48500CD7F9B /* bow5.png */,
+				FAC57DB116F3AB7200CD7F9B /* bg.png */,
 				FAC57DA716F3A48500CD7F9B /* bow6.png */,
 				F367072816F30A0600F723F2 /* Icon-72@2x.png */,
+				FAC57DAF16F3A8E100CD7F9B /* bkg.png */,
 				F367072916F30A0600F723F2 /* tie1.gif */,
 				F367072A16F30A0600F723F2 /* tie2.gif */,
 				F367072B16F30A0600F723F2 /* tie3.gif */,
 				F367072C16F30A0600F723F2 /* tie5.gif */,
+				FAC57DB316F3AB8300CD7F9B /* bk.png */,
 				F367072D16F30A0600F723F2 /* tie6.gif */,
 				F367072E16F30A0700F723F2 /* tie7.gif */,
 				F367072F16F30A0700F723F2 /* tie8.gif */,
 				F367073016F30A0700F723F2 /* tie9.gif */,
 				F3DB0A2316F2CA4800AFD737 /* Icon-72.png */,
 				F3DB0A1F16F2CA3D00AFD737 /* Icon@2x.png */,
+				FAC57DB516F3AC8C00CD7F9B /* back.png */,
 				F3DB0A1D16F2CA3B00AFD737 /* Icon.png */,
 				F350A0A116F1AE4D00381B4D /* Modal.h */,
 				F350A0A216F1AE4D00381B4D /* Modal.m */,
@@ -404,6 +421,10 @@
 				FAC57DAB16F3A48500CD7F9B /* bow4.png in Resources */,
 				FAC57DAC16F3A48500CD7F9B /* bow5.png in Resources */,
 				FAC57DAD16F3A48500CD7F9B /* bow6.png in Resources */,
+				FAC57DB016F3A8E100CD7F9B /* bkg.png in Resources */,
+				FAC57DB216F3AB7200CD7F9B /* bg.png in Resources */,
+				FAC57DB416F3AB8300CD7F9B /* bk.png in Resources */,
+				FAC57DB616F3AC8C00CD7F9B /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +462,7 @@
 				F367070416F2E8EC00F723F2 /* BowTieViewCell.m in Sources */,
 				F367070716F2E91900F723F2 /* PocketViewController.m in Sources */,
 				F367070A16F2E93D00F723F2 /* PocketViewCell.m in Sources */,
+				FAC57DB916F3AF6700CD7F9B /* NormalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

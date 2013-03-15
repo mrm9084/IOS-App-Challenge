@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sW4-9h-gCx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sW4-9h-gCx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -22,7 +22,7 @@
         <!--View Controller - iSuitUp-->
         <scene sceneID="yOs-x8-VQA">
             <objects>
-                <viewController id="fbq-Y8-asK" sceneMemberID="viewController">
+                <viewController id="fbq-Y8-asK" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="NQp-dX-NQo">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,6 +52,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pSo-dm-g4d" kind="push" id="nwr-df-2bX"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Icon-72@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-95-T9i">
                                 <constraints>
@@ -102,7 +105,6 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.44564341944018065" green="0.4838186949291769" blue="0.54813058035714279" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="A3d-Bb-nN8" firstAttribute="leading" secondItem="WpG-lH-1y1" secondAttribute="leading" type="default" id="3l8-V8-gWd"/>
                             <constraint firstAttribute="trailing" secondItem="ebI-Is-LVN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="816-Is-DVw"/>
@@ -123,33 +125,36 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="iSuitUp" id="fyw-Pz-JqE"/>
+                    <connections>
+                        <outlet property="view" destination="NQp-dX-NQo" id="kBo-WG-eYC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuu-X4-zSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Clothing View Controller-->
         <scene sceneID="A6C-fc-0rK">
             <objects>
-                <viewController id="pSo-dm-g4d" sceneMemberID="viewController">
+                <viewController id="pSo-dm-g4d" customClass="ClothingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cZO-tY-ajs">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7De-eb-ucR">
                                 <color key="backgroundColor" red="1" green="0.049151788657596063" blue="0.0062168863265557039" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="dQE-gy-YJl"/>
+                                    <constraint firstAttribute="height" constant="94" id="W1X-I9-9EW"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iuC-AE-w3V">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iuC-AE-w3V">
                                     <size key="itemSize" width="65" height="65"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="Foo-L5-kxh" customClass="ColorViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="color" id="Foo-L5-kxh" customClass="ColorViewCell">
+                                        <rect key="frame" x="0.0" y="14" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
@@ -176,15 +181,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="T41-1z-JTV"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0bu-J6-Oke">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0bu-J6-Oke">
                                     <size key="itemSize" width="65" height="65"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PatternCell" id="ogZ-fc-jDg" customClass="PatternViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pattern" id="ogZ-fc-jDg" customClass="PatternViewCell">
+                                        <rect key="frame" x="0.0" y="8" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
@@ -214,9 +219,15 @@
                             <constraint firstItem="7De-eb-ucR" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="EGN-zN-7j0"/>
                             <constraint firstItem="0qF-do-b6d" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="HTP-xe-6Wr"/>
                             <constraint firstItem="7De-eb-ucR" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="W0R-dc-KwJ"/>
-                            <constraint firstItem="7De-eb-ucR" firstAttribute="top" secondItem="cZO-tY-ajs" secondAttribute="top" constant="134" id="tLd-rx-3Ic"/>
+                            <constraint firstItem="7De-eb-ucR" firstAttribute="top" secondItem="cZO-tY-ajs" secondAttribute="top" constant="135" id="XT2-SX-XZY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ViB-mH-2ha"/>
+                    <connections>
+                        <outlet property="colorCollectionView" destination="7De-eb-ucR" id="afa-TG-sNF"/>
+                        <outlet property="colorcolectionView" destination="7De-eb-ucR" id="ifx-pJ-yNc"/>
+                        <outlet property="patterncollectionView" destination="0qF-do-b6d" id="9hX-fd-wha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-Rn-gCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +236,7 @@
         <!--View Controller-->
         <scene sceneID="6ZQ-PN-Nx7">
             <objects>
-                <viewController id="S19-72-b4I" sceneMemberID="viewController">
+                <viewController id="S19-72-b4I" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSH-bf-TeC">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -280,7 +291,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.44705882352941173" green="0.4823529411764706" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="HzZ-VV-tb1" secondAttribute="bottom" constant="185" id="B6W-yC-FhV"/>
                             <constraint firstItem="gdl-Cd-hCd" firstAttribute="centerX" secondItem="nSH-bf-TeC" secondAttribute="centerX" type="default" id="JDe-ZG-YOh"/>
@@ -328,12 +338,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hej-9Z-pvZ">
-                                                    <color key="backgroundColor" red="0.44564341940000002" green="0.48381869490000001" blue="0.54813058039999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="R9d-eq-JtC"/>
                                                         <constraint firstAttribute="height" constant="113" id="tiC-d2-f4b"/>
                                                     </constraints>
-                                                    <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -401,19 +409,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eof-Ph-9lO">
-                                                    <color key="backgroundColor" red="0.44564341940000002" green="0.48381869490000001" blue="0.54813058039999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="0r3-eM-wNZ"/>
                                                         <constraint firstAttribute="height" constant="128" id="8DL-ZK-gFV"/>
                                                     </constraints>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Zuh-yg-g8B" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="44Q-e4-Lo4"/>
                                             <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="93" id="6Zb-4K-Hyo"/>
@@ -470,7 +476,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J35-JS-lxI">
-                                                    <color key="backgroundColor" red="0.44564341940000002" green="0.48381869490000001" blue="0.54813058039999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="192" id="eWx-Zv-eEQ"/>
                                                         <constraint firstAttribute="width" constant="227" id="i1Y-y1-cpk"/>
@@ -539,6 +544,13 @@
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
             </relationships>
         </class>
+        <class className="ClothingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClothingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="colorcolectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="patterncollectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
         <class className="ColorViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorViewCell.h"/>
             <relationships>
@@ -589,8 +601,11 @@
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="view" candidateClass="UIView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
