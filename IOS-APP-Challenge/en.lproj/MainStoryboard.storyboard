@@ -397,15 +397,14 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zuh-yg-g8B">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="142" id="mVz-rO-bj1"/>
-                                                        <constraint firstAttribute="height" constant="177" id="mgG-ln-4g4"/>
+                                                        <constraint firstAttribute="height" constant="150" id="sOB-Pw-jUJ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eof-Ph-9lO">
                                                     <color key="backgroundColor" red="0.44564341940000002" green="0.48381869490000001" blue="0.54813058039999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="0r3-eM-wNZ"/>
                                                         <constraint firstAttribute="height" constant="128" id="8DL-ZK-gFV"/>
-                                                        <constraint firstAttribute="width" constant="180" id="FVh-YS-g2b"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -416,10 +415,11 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Zuh-yg-g8B" firstAttribute="leading" secondItem="Wt5-s3-q8A" secondAttribute="leading" constant="77" id="8ck-L7-nHO"/>
-                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="ExS-71-lfI"/>
+                                            <constraint firstItem="Zuh-yg-g8B" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="44Q-e4-Lo4"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="93" id="6Zb-4K-Hyo"/>
+                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="trailing" secondItem="Zuh-yg-g8B" secondAttribute="trailing" type="default" id="YWh-qi-Ucf"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="top" secondItem="Wt5-s3-q8A" secondAttribute="top" constant="56" id="cL0-e9-E3x"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="65" id="udm-nK-jd7"/>
+                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="leading" secondItem="Zuh-yg-g8B" secondAttribute="leading" type="default" id="eAo-dz-qJJ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="Zuh-yg-g8B" id="GrR-UR-eX9"/>

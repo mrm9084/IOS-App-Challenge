@@ -63,7 +63,7 @@
     
     cell.TextView.text= textArray[indexPath.row];
     cell.ImageView.image = imageArray[indexPath.row];
-    cell.contentView.backgroundColor = [UIColor blueColor];
+    cell.contentView.backgroundColor = [UIColor colorWithRed:0.44705882352941 green:0.48235294117647 blue:0.54901960784314 alpha:1];
     return cell;
 }
 

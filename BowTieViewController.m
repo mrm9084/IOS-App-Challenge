@@ -42,7 +42,7 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 7;
+    return 6;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BowTieViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BowView" forIndexPath:indexPath];
@@ -53,7 +53,7 @@
                           @"Now double end B over itself to form the front base loop of the bow tie.",
                           @"Loop end A over the center of the loop you just formed.",
                           @"Holding everything in place, double end A back on itself and poke it through the loop behind the bow tie.",
-                          @"Adjust the bow tie by tugging at the ends of it and straightening the center knot.",nil];
+                         nil];
     
     NSArray *imageArray = [[NSArray alloc] initWithObjects:
                            [UIImage imageNamed:@"bow1.png"],
@@ -62,7 +62,6 @@
                            [UIImage imageNamed:@"bow4.png"],
                            [UIImage imageNamed:@"bow5.png"],
                            [UIImage imageNamed:@"bow6.png"],
-                           [UIImage imageNamed:@"bow7.png"],
                            nil];
     
     cell.TextView.text= textArray[indexPath.row];
