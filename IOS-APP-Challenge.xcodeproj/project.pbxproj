@@ -40,8 +40,6 @@
 		F367070416F2E8EC00F723F2 /* BowTieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F367070316F2E8EC00F723F2 /* BowTieViewCell.m */; };
 		F367070716F2E91900F723F2 /* PocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F367070616F2E91900F723F2 /* PocketViewController.m */; };
 		F367070A16F2E93D00F723F2 /* PocketViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F367070916F2E93D00F723F2 /* PocketViewCell.m */; };
-		F367071A16F2F3E000F723F2 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F367071916F2F3E000F723F2 /* Icon-72@2x.png */; };
-		F367071C16F2F4DD00F723F2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F367071B16F2F4DD00F723F2 /* background.png */; };
 		F367073616F30A0700F723F2 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = F367072716F30A0600F723F2 /* button.png */; };
 		F367073716F30A0700F723F2 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F367072816F30A0600F723F2 /* Icon-72@2x.png */; };
 		F367073816F30A0700F723F2 /* tie1.gif in Resources */ = {isa = PBXBuildFile; fileRef = F367072916F30A0600F723F2 /* tie1.gif */; };
@@ -52,12 +50,6 @@
 		F367073D16F30A0700F723F2 /* tie7.gif in Resources */ = {isa = PBXBuildFile; fileRef = F367072E16F30A0700F723F2 /* tie7.gif */; };
 		F367073E16F30A0700F723F2 /* tie8.gif in Resources */ = {isa = PBXBuildFile; fileRef = F367072F16F30A0700F723F2 /* tie8.gif */; };
 		F367073F16F30A0700F723F2 /* tie9.gif in Resources */ = {isa = PBXBuildFile; fileRef = F367073016F30A0700F723F2 /* tie9.gif */; };
-		F368D33C16F31B1A002B0A90 /* bow1.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33616F31B1A002B0A90 /* bow1.png */; };
-		F368D33D16F31B1A002B0A90 /* bow2.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33716F31B1A002B0A90 /* bow2.png */; };
-		F368D33E16F31B1A002B0A90 /* bow3.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33816F31B1A002B0A90 /* bow3.png */; };
-		F368D33F16F31B1A002B0A90 /* bow4.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33916F31B1A002B0A90 /* bow4.png */; };
-		F368D34016F31B1A002B0A90 /* bow5.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33A16F31B1A002B0A90 /* bow5.png */; };
-		F368D34116F31B1A002B0A90 /* bow6.png in Resources */ = {isa = PBXBuildFile; fileRef = F368D33B16F31B1A002B0A90 /* bow6.png */; };
 		F3705E6016F2B6B900EB688B /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3705E5F16F2B6B900EB688B /* SwipeViewController.m */; };
 		F3705E6316F2BA4D00EB688B /* ScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3705E6216F2BA4D00EB688B /* ScrollViewCell.m */; };
 		F3705E6616F2BB1E00EB688B /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3705E6516F2BB1E00EB688B /* ScrollViewController.m */; };
@@ -68,6 +60,12 @@
 		F3DB0A2716F2CD2B00AFD737 /* ClothingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2616F2CD2B00AFD737 /* ClothingViewController.m */; };
 		F3DB0A2A16F2DBCF00AFD737 /* ColorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2916F2DBCF00AFD737 /* ColorViewCell.m */; };
 		F3DB0A2D16F2DBFA00AFD737 /* PatternViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB0A2C16F2DBFA00AFD737 /* PatternViewCell.m */; };
+		FAC57DA816F3A48500CD7F9B /* bow1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA216F3A48500CD7F9B /* bow1.png */; };
+		FAC57DA916F3A48500CD7F9B /* bow2.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA316F3A48500CD7F9B /* bow2.png */; };
+		FAC57DAA16F3A48500CD7F9B /* bow3.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA416F3A48500CD7F9B /* bow3.png */; };
+		FAC57DAB16F3A48500CD7F9B /* bow4.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA516F3A48500CD7F9B /* bow4.png */; };
+		FAC57DAC16F3A48500CD7F9B /* bow5.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA616F3A48500CD7F9B /* bow5.png */; };
+		FAC57DAD16F3A48500CD7F9B /* bow6.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC57DA716F3A48500CD7F9B /* bow6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,8 +127,6 @@
 		F367070616F2E91900F723F2 /* PocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketViewController.m; sourceTree = "<group>"; };
 		F367070816F2E93D00F723F2 /* PocketViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketViewCell.h; sourceTree = "<group>"; };
 		F367070916F2E93D00F723F2 /* PocketViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketViewCell.m; sourceTree = "<group>"; };
-		F367071916F2F3E000F723F2 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
-		F367071B16F2F4DD00F723F2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../background.png; sourceTree = "<group>"; };
 		F367072716F30A0600F723F2 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		F367072816F30A0600F723F2 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		F367072916F30A0600F723F2 /* tie1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tie1.gif; sourceTree = "<group>"; };
@@ -141,12 +137,6 @@
 		F367072E16F30A0700F723F2 /* tie7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tie7.gif; sourceTree = "<group>"; };
 		F367072F16F30A0700F723F2 /* tie8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tie8.gif; sourceTree = "<group>"; };
 		F367073016F30A0700F723F2 /* tie9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tie9.gif; sourceTree = "<group>"; };
-		F368D33616F31B1A002B0A90 /* bow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow1.png; path = ../attachments/bow1.png; sourceTree = "<group>"; };
-		F368D33716F31B1A002B0A90 /* bow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow2.png; path = ../attachments/bow2.png; sourceTree = "<group>"; };
-		F368D33816F31B1A002B0A90 /* bow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow3.png; path = ../attachments/bow3.png; sourceTree = "<group>"; };
-		F368D33916F31B1A002B0A90 /* bow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow4.png; path = ../attachments/bow4.png; sourceTree = "<group>"; };
-		F368D33A16F31B1A002B0A90 /* bow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow5.png; path = ../attachments/bow5.png; sourceTree = "<group>"; };
-		F368D33B16F31B1A002B0A90 /* bow6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow6.png; path = ../attachments/bow6.png; sourceTree = "<group>"; };
 		F3705E5E16F2B6B900EB688B /* SwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
 		F3705E5F16F2B6B900EB688B /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		F3705E6116F2BA4D00EB688B /* ScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewCell.h; sourceTree = "<group>"; };
@@ -163,6 +153,12 @@
 		F3DB0A2916F2DBCF00AFD737 /* ColorViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewCell.m; sourceTree = "<group>"; };
 		F3DB0A2B16F2DBFA00AFD737 /* PatternViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternViewCell.h; sourceTree = "<group>"; };
 		F3DB0A2C16F2DBFA00AFD737 /* PatternViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternViewCell.m; sourceTree = "<group>"; };
+		FAC57DA216F3A48500CD7F9B /* bow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow1.png; path = ../Desktop/attachments/bow1.png; sourceTree = "<group>"; };
+		FAC57DA316F3A48500CD7F9B /* bow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow2.png; path = ../Desktop/attachments/bow2.png; sourceTree = "<group>"; };
+		FAC57DA416F3A48500CD7F9B /* bow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow3.png; path = ../Desktop/attachments/bow3.png; sourceTree = "<group>"; };
+		FAC57DA516F3A48500CD7F9B /* bow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow4.png; path = ../Desktop/attachments/bow4.png; sourceTree = "<group>"; };
+		FAC57DA616F3A48500CD7F9B /* bow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow5.png; path = ../Desktop/attachments/bow5.png; sourceTree = "<group>"; };
+		FAC57DA716F3A48500CD7F9B /* bow6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bow6.png; path = ../Desktop/attachments/bow6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,15 +270,14 @@
 			children = (
 				F36706FF16F2E8BD00F723F2 /* BowTieViewController.h */,
 				F367070016F2E8BD00F723F2 /* BowTieViewController.m */,
-				F367071916F2F3E000F723F2 /* Icon-72@2x.png */,
 				F3379C1116F30CB300F81D06 /* tie4.gif */,
 				F367072716F30A0600F723F2 /* button.png */,
-				F368D33616F31B1A002B0A90 /* bow1.png */,
-				F368D33716F31B1A002B0A90 /* bow2.png */,
-				F368D33816F31B1A002B0A90 /* bow3.png */,
-				F368D33916F31B1A002B0A90 /* bow4.png */,
-				F368D33A16F31B1A002B0A90 /* bow5.png */,
-				F368D33B16F31B1A002B0A90 /* bow6.png */,
+				FAC57DA216F3A48500CD7F9B /* bow1.png */,
+				FAC57DA316F3A48500CD7F9B /* bow2.png */,
+				FAC57DA416F3A48500CD7F9B /* bow3.png */,
+				FAC57DA516F3A48500CD7F9B /* bow4.png */,
+				FAC57DA616F3A48500CD7F9B /* bow5.png */,
+				FAC57DA716F3A48500CD7F9B /* bow6.png */,
 				F367072816F30A0600F723F2 /* Icon-72@2x.png */,
 				F367072916F30A0600F723F2 /* tie1.gif */,
 				F367072A16F30A0600F723F2 /* tie2.gif */,
@@ -293,7 +288,6 @@
 				F367072F16F30A0700F723F2 /* tie8.gif */,
 				F367073016F30A0700F723F2 /* tie9.gif */,
 				F3DB0A2316F2CA4800AFD737 /* Icon-72.png */,
-				F367071B16F2F4DD00F723F2 /* background.png */,
 				F3DB0A1F16F2CA3D00AFD737 /* Icon@2x.png */,
 				F3DB0A1D16F2CA3B00AFD737 /* Icon.png */,
 				F350A0A116F1AE4D00381B4D /* Modal.h */,
@@ -393,8 +387,6 @@
 				F3DB0A1E16F2CA3B00AFD737 /* Icon.png in Resources */,
 				F3DB0A2016F2CA3D00AFD737 /* Icon@2x.png in Resources */,
 				F3DB0A2416F2CA4800AFD737 /* Icon-72.png in Resources */,
-				F367071A16F2F3E000F723F2 /* Icon-72@2x.png in Resources */,
-				F367071C16F2F4DD00F723F2 /* background.png in Resources */,
 				F367073616F30A0700F723F2 /* button.png in Resources */,
 				F367073716F30A0700F723F2 /* Icon-72@2x.png in Resources */,
 				F367073816F30A0700F723F2 /* tie1.gif in Resources */,
@@ -406,12 +398,12 @@
 				F367073E16F30A0700F723F2 /* tie8.gif in Resources */,
 				F367073F16F30A0700F723F2 /* tie9.gif in Resources */,
 				F3379C1716F30CB300F81D06 /* tie4.gif in Resources */,
-				F368D33C16F31B1A002B0A90 /* bow1.png in Resources */,
-				F368D33D16F31B1A002B0A90 /* bow2.png in Resources */,
-				F368D33E16F31B1A002B0A90 /* bow3.png in Resources */,
-				F368D33F16F31B1A002B0A90 /* bow4.png in Resources */,
-				F368D34016F31B1A002B0A90 /* bow5.png in Resources */,
-				F368D34116F31B1A002B0A90 /* bow6.png in Resources */,
+				FAC57DA816F3A48500CD7F9B /* bow1.png in Resources */,
+				FAC57DA916F3A48500CD7F9B /* bow2.png in Resources */,
+				FAC57DAA16F3A48500CD7F9B /* bow3.png in Resources */,
+				FAC57DAB16F3A48500CD7F9B /* bow4.png in Resources */,
+				FAC57DAC16F3A48500CD7F9B /* bow5.png in Resources */,
+				FAC57DAD16F3A48500CD7F9B /* bow6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
