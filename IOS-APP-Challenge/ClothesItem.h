@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Color.h"
-#import "Pattern.h"
+
 @class Outfit;
 
 @interface ClothesItem : NSObject
