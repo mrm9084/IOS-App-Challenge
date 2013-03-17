@@ -24,7 +24,7 @@
             <objects>
                 <viewController id="fbq-Y8-asK" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="NQp-dX-NQo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS9-A0-ypW">
@@ -39,6 +39,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FJK-hf-Ge9" kind="push" id="YJi-xh-8de"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpG-lH-1y1">
                                 <constraints>
@@ -134,41 +137,538 @@
             <point key="canvasLocation" x="143" y="-10"/>
         </scene>
         <!--Pick View Controller-->
-        <scene sceneID="A6C-fc-0rK">
+        <scene sceneID="R7c-fn-OVW">
             <objects>
-                <viewController id="pSo-dm-g4d" customClass="PickViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cZO-tY-ajs">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                <viewController id="FJK-hf-Ge9" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FcX-9M-IG7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8r-iA-o7F">
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalSuit" translatesAutoresizingMaskIntoConstraints="NO" id="cVz-oN-kVG">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="6Op-le-d79"/>
+                                    <constraint firstAttribute="width" constant="288" id="O57-Sv-BVi"/>
+                                    <constraint firstAttribute="height" constant="216" id="ZuK-KR-4GT"/>
                                 </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbq-GS-fXJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Suit Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79K-tZ-60w">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiV-b3-pda">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="lbV-Dn-ogV"/>
+                                    <constraint firstAttribute="height" constant="29" id="72m-BT-ebv"/>
+                                    <constraint firstAttribute="width" constant="64" id="kbs-dc-VmM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xs8-Xg-UYI" kind="push" id="sQe-1p-bQv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cVz-oN-kVG" firstAttribute="top" secondItem="FcX-9M-IG7" secondAttribute="top" constant="105" id="0qD-ch-SPI"/>
+                            <constraint firstAttribute="trailing" secondItem="BiV-b3-pda" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1IH-Hl-kk5"/>
+                            <constraint firstItem="cVz-oN-kVG" firstAttribute="centerX" secondItem="79K-tZ-60w" secondAttribute="centerX" type="default" id="5xv-JB-MCc"/>
+                            <constraint firstAttribute="bottom" secondItem="BiV-b3-pda" secondAttribute="bottom" constant="19" id="Q8s-mi-Jm7"/>
+                            <constraint firstItem="79K-tZ-60w" firstAttribute="top" secondItem="FcX-9M-IG7" secondAttribute="top" constant="58" id="aqo-9X-63m"/>
+                            <constraint firstItem="cVz-oN-kVG" firstAttribute="centerX" secondItem="FcX-9M-IG7" secondAttribute="centerX" type="default" id="tIR-fr-enh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcS-eT-zQt"/>
+                    <connections>
+                        <outlet property="pickerView" destination="cVz-oN-kVG" id="Rds-Rv-VdI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcR-oO-hXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="-760"/>
+        </scene>
+        <!--Present Outfit View Controller-->
+        <scene sceneID="Jhu-EU-LZv">
+            <objects>
+                <viewController id="RcZ-Of-8Cb" customClass="PresentOutfitViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5XS-kN-Vtr">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-F4-yIG">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lcs-F4-yIG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0Il-vK-fud"/>
+                            <constraint firstItem="lcs-F4-yIG" firstAttribute="top" secondItem="5XS-kN-Vtr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="G0Q-dw-LbI"/>
+                            <constraint firstItem="lcs-F4-yIG" firstAttribute="leading" secondItem="5XS-kN-Vtr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Oa7-wl-RtZ"/>
+                            <constraint firstAttribute="bottom" secondItem="lcs-F4-yIG" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Xgn-DX-Ce7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ndA-wi-y15"/>
+                    <connections>
+                        <outlet property="presentOutfit" destination="lcs-F4-yIG" id="Z5K-VD-SBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmm-Vf-c5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" restorationIdentifier="ShirtP" id="7Hh-e3-ZZG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                </pickerView>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-586"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="9r5-nM-OKO">
+            <objects>
+                <viewController id="Xs8-Xg-UYI" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hrr-ft-EKg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalPattern" translatesAutoresizingMaskIntoConstraints="NO" id="j46-cL-g41">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="fPW-de-GIn"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Suit Pattern" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-6d-0zt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-Vs-JKv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="6VW-wi-h6h"/>
+                                    <constraint firstAttribute="width" constant="62" id="Eon-jD-cnR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y4b-Cz-Qjn" kind="push" id="JoX-j6-J9o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QGd-Vs-JKv" secondAttribute="bottom" constant="19" id="5HA-JX-ewe"/>
+                            <constraint firstItem="j46-cL-g41" firstAttribute="centerY" secondItem="hrr-ft-EKg" secondAttribute="centerY" type="default" id="BTX-nd-fub"/>
+                            <constraint firstItem="j46-cL-g41" firstAttribute="trailing" secondItem="hrr-ft-EKg" secondAttribute="trailing" type="default" id="NkH-tU-RAA"/>
+                            <constraint firstItem="d6p-6d-0zt" firstAttribute="centerX" secondItem="j46-cL-g41" secondAttribute="centerX" type="default" id="TGz-HU-tDi"/>
+                            <constraint firstItem="d6p-6d-0zt" firstAttribute="top" secondItem="hrr-ft-EKg" secondAttribute="top" constant="64" id="TJK-4m-Df1"/>
+                            <constraint firstItem="j46-cL-g41" firstAttribute="leading" secondItem="hrr-ft-EKg" secondAttribute="leading" type="default" id="lDb-QV-6g2"/>
+                            <constraint firstAttribute="trailing" secondItem="QGd-Vs-JKv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sPb-sv-Ccf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SGf-Di-Ptn"/>
+                    <connections>
+                        <outlet property="pickerView" destination="j46-cL-g41" id="ekj-vR-RWs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVJ-I6-rCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-1422"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="6Ij-dA-uhy">
+            <objects>
+                <viewController id="y4b-Cz-Qjn" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvL-ui-UzB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalShirt" translatesAutoresizingMaskIntoConstraints="NO" id="NoT-aP-XKC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="dEU-oa-YTH"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Shirt Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-wK-4IG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfC-SF-x9v">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="SgZ-yw-5jh"/>
+                                    <constraint firstAttribute="height" constant="25" id="fcR-8Y-l9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="z5Q-Qp-KYb" kind="push" id="t2s-vY-1vN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R5s-wK-4IG" firstAttribute="top" secondItem="vvL-ui-UzB" secondAttribute="top" constant="60" id="6a2-8y-uj2"/>
+                            <constraint firstItem="NoT-aP-XKC" firstAttribute="trailing" secondItem="vvL-ui-UzB" secondAttribute="trailing" type="default" id="avd-Qp-3bk"/>
+                            <constraint firstItem="NoT-aP-XKC" firstAttribute="leading" secondItem="vvL-ui-UzB" secondAttribute="leading" type="default" id="cki-oJ-fRS"/>
+                            <constraint firstAttribute="trailing" secondItem="XfC-SF-x9v" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k7S-KP-EQL"/>
+                            <constraint firstItem="R5s-wK-4IG" firstAttribute="centerX" secondItem="NoT-aP-XKC" secondAttribute="centerX" type="default" id="rtJ-N5-kuN"/>
+                            <constraint firstAttribute="bottom" secondItem="XfC-SF-x9v" secondAttribute="bottom" constant="19" id="txG-Eb-QKb"/>
+                            <constraint firstItem="NoT-aP-XKC" firstAttribute="centerY" secondItem="vvL-ui-UzB" secondAttribute="centerY" type="default" id="zmJ-HB-4jy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="50l-2c-0DY"/>
+                    <connections>
+                        <outlet property="pickerView" destination="NoT-aP-XKC" id="j00-te-jVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeI-Bi-ST8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="-1410"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="9Xl-c2-heR">
+            <objects>
+                <viewController id="z5Q-Qp-KYb" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="86P-U6-Krz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalTie" translatesAutoresizingMaskIntoConstraints="NO" id="SnC-n7-Kez">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="YuE-e2-cXd"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Tie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-Bx-bJM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-k5-UYl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="WVz-ho-tbw"/>
+                                    <constraint firstAttribute="width" constant="57" id="r3Z-um-RF6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e4a-Xd-z48" kind="push" id="6du-pM-T30"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Hml-k5-UYl" secondAttribute="bottom" constant="19" id="0oZ-xr-o7W"/>
+                            <constraint firstAttribute="trailing" secondItem="Hml-k5-UYl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="23v-aN-0C7"/>
+                            <constraint firstItem="SnC-n7-Kez" firstAttribute="trailing" secondItem="86P-U6-Krz" secondAttribute="trailing" type="default" id="c9g-he-rQI"/>
+                            <constraint firstItem="SnC-n7-Kez" firstAttribute="centerY" secondItem="86P-U6-Krz" secondAttribute="centerY" type="default" id="d71-fF-Pt9"/>
+                            <constraint firstItem="SnC-n7-Kez" firstAttribute="leading" secondItem="86P-U6-Krz" secondAttribute="leading" type="default" id="e6d-Qq-Tp3"/>
+                            <constraint firstItem="Gg1-Bx-bJM" firstAttribute="top" secondItem="86P-U6-Krz" secondAttribute="top" constant="64" id="wG5-nL-jTK"/>
+                            <constraint firstItem="Gg1-Bx-bJM" firstAttribute="centerX" secondItem="SnC-n7-Kez" secondAttribute="centerX" type="default" id="xVs-Jy-LBa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r21-Oh-neb"/>
+                    <connections>
+                        <outlet property="pickerView" destination="SnC-n7-Kez" id="nAA-aP-hvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sti-lK-tBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-1415"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="NXA-1j-Zot">
+            <objects>
+                <viewController id="TUb-IJ-kVj" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gap-83-noa">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalSuit" translatesAutoresizingMaskIntoConstraints="NO" id="9EI-v8-StI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="XL1-gK-Qjj"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Belt Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdz-Qc-bqN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjI-cd-et9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="9UB-Wi-T6x"/>
+                                    <constraint firstAttribute="height" constant="25" id="V54-z6-EcQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RcZ-Of-8Cb" kind="push" id="lRs-XS-Bzb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zdz-Qc-bqN" firstAttribute="centerX" secondItem="9EI-v8-StI" secondAttribute="centerX" type="default" id="5vm-Wz-dM5"/>
+                            <constraint firstAttribute="trailing" secondItem="fjI-cd-et9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="W0J-Bv-SOa"/>
+                            <constraint firstItem="zdz-Qc-bqN" firstAttribute="top" secondItem="gap-83-noa" secondAttribute="top" constant="49" id="baR-pl-Wcu"/>
+                            <constraint firstItem="9EI-v8-StI" firstAttribute="centerY" secondItem="gap-83-noa" secondAttribute="centerY" type="default" id="gQT-pK-Xdo"/>
+                            <constraint firstAttribute="bottom" secondItem="fjI-cd-et9" secondAttribute="bottom" constant="19" id="hE3-tk-uSx"/>
+                            <constraint firstItem="9EI-v8-StI" firstAttribute="leading" secondItem="gap-83-noa" secondAttribute="leading" type="default" id="sjf-cY-lVL"/>
+                            <constraint firstItem="9EI-v8-StI" firstAttribute="trailing" secondItem="gap-83-noa" secondAttribute="trailing" type="default" id="tlt-Bk-2qt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yjm-i2-yT1"/>
+                    <connections>
+                        <outlet property="pickerView" destination="9EI-v8-StI" id="3wa-51-4wg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcd-MF-iNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-2159"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="ccx-0W-1Ws">
+            <objects>
+                <viewController id="wxJ-TK-qfp" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apC-SD-Inp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVd-F6-X6j">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="2Eo-mB-RIf"/>
+                                    <constraint firstAttribute="height" constant="30" id="i5h-Cb-QnE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TUb-IJ-kVj" kind="push" id="P6a-OJ-U7k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Sock Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NL1-Su-o6d">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalSuit" translatesAutoresizingMaskIntoConstraints="NO" id="cc3-8b-B79">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="108-Kh-oe9"/>
                                 </constraints>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jbq-GS-fXJ" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="5ze-Je-3kq"/>
-                            <constraint firstItem="jbq-GS-fXJ" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="Gi6-fK-u2h"/>
-                            <constraint firstItem="r8r-iA-o7F" firstAttribute="trailing" secondItem="cZO-tY-ajs" secondAttribute="trailing" type="default" id="KVX-6M-yZt"/>
-                            <constraint firstAttribute="bottom" secondItem="jbq-GS-fXJ" secondAttribute="bottom" constant="10" id="X1h-eC-m2h"/>
-                            <constraint firstItem="r8r-iA-o7F" firstAttribute="leading" secondItem="cZO-tY-ajs" secondAttribute="leading" type="default" id="vX8-xX-3l5"/>
-                            <constraint firstItem="r8r-iA-o7F" firstAttribute="top" secondItem="cZO-tY-ajs" secondAttribute="top" constant="40" id="yws-GR-NdK"/>
+                            <constraint firstItem="cc3-8b-B79" firstAttribute="centerX" secondItem="NL1-Su-o6d" secondAttribute="centerX" type="default" id="6f9-TE-lCN"/>
+                            <constraint firstItem="cc3-8b-B79" firstAttribute="trailing" secondItem="apC-SD-Inp" secondAttribute="trailing" type="default" id="DSH-Bp-6OZ"/>
+                            <constraint firstItem="NL1-Su-o6d" firstAttribute="top" secondItem="apC-SD-Inp" secondAttribute="top" constant="63" id="FcR-Vb-yfU"/>
+                            <constraint firstItem="cc3-8b-B79" firstAttribute="centerY" secondItem="apC-SD-Inp" secondAttribute="centerY" type="default" id="MZX-ib-7wB"/>
+                            <constraint firstAttribute="trailing" secondItem="cVd-F6-X6j" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PNU-0k-z2T"/>
+                            <constraint firstAttribute="bottom" secondItem="cVd-F6-X6j" secondAttribute="bottom" constant="19" id="X3a-co-FJG"/>
+                            <constraint firstItem="cc3-8b-B79" firstAttribute="leading" secondItem="apC-SD-Inp" secondAttribute="leading" type="default" id="lxu-ep-3rl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ViB-mH-2ha"/>
+                    <navigationItem key="navigationItem" id="XUX-ci-7LX"/>
                     <connections>
-                        <outlet property="patternView" destination="jbq-GS-fXJ" id="H1C-o6-UKl"/>
-                        <outlet property="pickerView" destination="r8r-iA-o7F" id="ZMO-gr-kKL"/>
+                        <outlet property="pickerView" destination="cc3-8b-B79" id="yOb-Wi-PhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zh0-ca-8zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-2159"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="nJ8-Pl-K53">
+            <objects>
+                <viewController id="4FT-Vh-eo3" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PCa-E3-M9S">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalSuit" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-cp-4t2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="BIV-mg-was"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Shoe Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-NQ-c40">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PD-8M-wbi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="2lB-Fc-c8N"/>
+                                    <constraint firstAttribute="height" constant="27" id="5kX-zU-XFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wxJ-TK-qfp" kind="push" id="4ua-sV-fQK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bFd-cp-4t2" firstAttribute="centerY" secondItem="PCa-E3-M9S" secondAttribute="centerY" type="default" id="P6x-Dl-X3w"/>
+                            <constraint firstItem="bFd-cp-4t2" firstAttribute="leading" secondItem="PCa-E3-M9S" secondAttribute="leading" type="default" id="RLG-Rr-M9a"/>
+                            <constraint firstItem="bFd-cp-4t2" firstAttribute="trailing" secondItem="PCa-E3-M9S" secondAttribute="trailing" type="default" id="Tqy-Kf-n4E"/>
+                            <constraint firstItem="m6z-NQ-c40" firstAttribute="centerX" secondItem="bFd-cp-4t2" secondAttribute="centerX" type="default" id="Y68-Bx-3iR"/>
+                            <constraint firstItem="m6z-NQ-c40" firstAttribute="top" secondItem="PCa-E3-M9S" secondAttribute="top" constant="57" id="bn3-6k-4cq"/>
+                            <constraint firstAttribute="trailing" secondItem="2PD-8M-wbi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eCv-uM-nsq"/>
+                            <constraint firstAttribute="bottom" secondItem="2PD-8M-wbi" secondAttribute="bottom" constant="19" id="oXS-bC-eTP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="u6b-hb-Puy"/>
+                    <connections>
+                        <outlet property="pickerView" destination="bFd-cp-4t2" id="sQn-6d-oJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u99-Yb-aMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2249" y="-2191"/>
+        </scene>
+        <!--Pick View Controller-->
+        <scene sceneID="fqt-Ng-837">
+            <objects>
+                <viewController id="e4a-Xd-z48" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSN-Ny-bqz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZh-E5-nnF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Soa-jX-SO6"/>
+                                    <constraint firstAttribute="width" constant="57" id="SxI-zx-oMU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4FT-Vh-eo3" kind="push" id="jgm-Dp-Jez"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="FormalPS" translatesAutoresizingMaskIntoConstraints="NO" id="ouU-v2-LHx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="L0s-7e-vd0"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Pocket Square Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-eo-ETi">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ouU-v2-LHx" firstAttribute="leading" secondItem="qSN-Ny-bqz" secondAttribute="leading" type="default" id="0c8-XF-0RW"/>
+                            <constraint firstItem="ouU-v2-LHx" firstAttribute="centerY" secondItem="qSN-Ny-bqz" secondAttribute="centerY" type="default" id="8aj-XX-cw0"/>
+                            <constraint firstItem="ouU-v2-LHx" firstAttribute="trailing" secondItem="qSN-Ny-bqz" secondAttribute="trailing" type="default" id="XNM-vQ-Ilu"/>
+                            <constraint firstAttribute="trailing" secondItem="qZh-E5-nnF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Xkm-NW-z8j"/>
+                            <constraint firstItem="Bvf-eo-ETi" firstAttribute="top" secondItem="qSN-Ny-bqz" secondAttribute="top" constant="56" id="fgs-hA-UK4"/>
+                            <constraint firstAttribute="bottom" secondItem="qZh-E5-nnF" secondAttribute="bottom" constant="19" id="gk7-jY-33M"/>
+                            <constraint firstItem="Bvf-eo-ETi" firstAttribute="centerX" secondItem="ouU-v2-LHx" secondAttribute="centerX" type="default" id="yGj-dQ-AyU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NwI-c5-JLm"/>
+                    <connections>
+                        <outlet property="pickerView" destination="ouU-v2-LHx" id="5kS-3i-Vbt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcW-96-1Og" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257" y="-1407"/>
+        </scene>
+        <!--Pick View Controller - Business-->
+        <scene sceneID="A6C-fc-0rK">
+            <objects>
+                <viewController id="pSo-dm-g4d" customClass="PickViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fO9-ye-ifa">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick a Suit Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-Pk-DG1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="SuitC" translatesAutoresizingMaskIntoConstraints="NO" id="Z2g-7a-Jf2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="yzX-UB-Rhe"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Z2g-7a-Jf2" firstAttribute="leading" secondItem="fO9-ye-ifa" secondAttribute="leading" type="default" id="CKP-rc-aFF"/>
+                            <constraint firstItem="Z2g-7a-Jf2" firstAttribute="centerY" secondItem="fO9-ye-ifa" secondAttribute="centerY" type="default" id="DuA-FG-oeS"/>
+                            <constraint firstItem="Q8M-Pk-DG1" firstAttribute="top" secondItem="fO9-ye-ifa" secondAttribute="top" constant="57" id="FOd-Ta-y5n"/>
+                            <constraint firstItem="Q8M-Pk-DG1" firstAttribute="leading" secondItem="fO9-ye-ifa" secondAttribute="leading" type="default" id="KLE-24-eOr"/>
+                            <constraint firstItem="Q8M-Pk-DG1" firstAttribute="trailing" secondItem="fO9-ye-ifa" secondAttribute="trailing" type="default" id="bcR-J7-f0N"/>
+                            <constraint firstItem="Z2g-7a-Jf2" firstAttribute="trailing" secondItem="fO9-ye-ifa" secondAttribute="trailing" type="default" id="jyO-TF-uGN"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vKO-0q-SYx" appends="YES" id="KgE-BJ-RGV"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Business" id="ViB-mH-2ha">
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="A4c-OP-3vV">
+                            <connections>
+                                <segue destination="RcZ-Of-8Cb" kind="push" identifier="Finish" id="uS8-Z4-NsK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TitleLabel" destination="Q8M-Pk-DG1" id="rMX-zJ-iBj"/>
+                        <outlet property="pickerView" destination="Z2g-7a-Jf2" id="mOg-aW-3t4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-Rn-gCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="vKO-0q-SYx">
+                    <connections>
+                        <segue destination="pSo-dm-g4d" kind="push" identifier="OutfitSegue" id="6Fu-vf-llG"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="965" y="-586"/>
         </scene>
@@ -177,7 +677,7 @@
             <objects>
                 <viewController id="S19-72-b4I" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSH-bf-TeC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-Cd-hCd">
@@ -252,7 +752,7 @@
             <objects>
                 <viewController id="RjZ-OB-rMT" customClass="ScrollViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6oA-vd-aJn">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yrw-Vv-v2B">
@@ -264,7 +764,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ScrollViewCell" id="jVH-B7-a9h" customClass="ScrollViewCell">
-                                        <rect key="frame" x="0.0" y="-22" width="320" height="548"/>
+                                        <rect key="frame" x="0.0" y="-66" width="320" height="548"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
@@ -272,13 +772,13 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-lH-Puw">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="175" id="ft7-4T-Wzn"/>
-                                                        <constraint firstAttribute="width" constant="162" id="okb-Mu-XiI"/>
+                                                        <constraint firstAttribute="width" constant="150" id="7oh-Lf-HIV"/>
+                                                        <constraint firstAttribute="height" constant="150" id="SVI-Lx-leT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hej-9Z-pvZ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="R9d-eq-JtC"/>
+                                                        <constraint firstAttribute="width" constant="177" id="0XI-jp-tEB"/>
                                                         <constraint firstAttribute="height" constant="113" id="tiC-d2-f4b"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -288,10 +788,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="207" id="6Ml-wC-KjH"/>
+                                            <constraint firstItem="hej-9Z-pvZ" firstAttribute="leading" secondItem="jVH-B7-a9h" secondAttribute="leading" constant="69" id="7Es-yL-BG7"/>
                                             <constraint firstItem="hej-9Z-pvZ" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="73" id="9Xe-ro-hBf"/>
-                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="centerX" secondItem="jVH-B7-a9h" secondAttribute="centerX" type="default" id="P7O-Mv-JjB"/>
-                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="centerX" secondItem="hej-9Z-pvZ" secondAttribute="centerX" type="default" id="tpV-Th-r6U"/>
+                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="236" id="IuB-lq-cjY"/>
+                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="centerX" secondItem="hej-9Z-pvZ" secondAttribute="centerX" type="default" id="Nft-5P-IqL"/>
                                         </constraints>
                                         <size key="customSize" width="320" height="548"/>
                                         <connections>
@@ -324,7 +824,7 @@
             <objects>
                 <viewController id="7l9-e9-Ct2" customClass="BowTieViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="INh-is-zAS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QQt-rt-hdt">
@@ -336,7 +836,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BowView" id="Wt5-s3-q8A" customClass="BowTieViewCell">
-                                        <rect key="frame" x="0.0" y="-22" width="320" height="548"/>
+                                        <rect key="frame" x="0.0" y="-66" width="320" height="548"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
@@ -347,7 +847,7 @@
                                                         <constraint firstAttribute="height" constant="150" id="sOB-Pw-jUJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eof-Ph-9lO">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eof-Ph-9lO">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="0r3-eM-wNZ"/>
                                                         <constraint firstAttribute="height" constant="128" id="8DL-ZK-gFV"/>
@@ -396,7 +896,7 @@
             <objects>
                 <viewController id="Yd9-vy-WDF" customClass="PocketViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzj-Hl-tfV">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-fM-h0G">
@@ -408,16 +908,16 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PocketViewCell" id="7N3-lJ-zyv" customClass="PocketViewCell">
-                                        <rect key="frame" x="0.0" y="-22" width="320" height="548"/>
+                                        <rect key="frame" x="0.0" y="-66" width="320" height="548"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J35-JS-lxI">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J35-JS-lxI">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="192" id="eWx-Zv-eEQ"/>
-                                                        <constraint firstAttribute="width" constant="227" id="i1Y-y1-cpk"/>
+                                                        <constraint firstAttribute="height" constant="170" id="4Bj-iS-UUZ"/>
+                                                        <constraint firstAttribute="width" constant="201" id="Zft-AK-cub"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -425,8 +925,8 @@
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-Kq-2v8">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="I1K-Vg-htp"/>
-                                                        <constraint firstAttribute="height" constant="128" id="qNj-BE-r5F"/>
+                                                        <constraint firstAttribute="width" constant="150" id="6WV-wd-0dc"/>
+                                                        <constraint firstAttribute="height" constant="150" id="B1l-pz-nI2"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -434,10 +934,10 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="cRt-Kq-2v8" secondAttribute="bottom" constant="62" id="D0W-5V-TxK"/>
-                                            <constraint firstItem="cRt-Kq-2v8" firstAttribute="centerX" secondItem="J35-JS-lxI" secondAttribute="centerX" type="default" id="NCy-eV-B67"/>
-                                            <constraint firstItem="cRt-Kq-2v8" firstAttribute="centerX" secondItem="7N3-lJ-zyv" secondAttribute="centerX" type="default" id="NON-pS-BtM"/>
-                                            <constraint firstItem="J35-JS-lxI" firstAttribute="top" secondItem="7N3-lJ-zyv" secondAttribute="top" constant="104" id="qcz-sK-ZY7"/>
+                                            <constraint firstAttribute="bottom" secondItem="cRt-Kq-2v8" secondAttribute="bottom" constant="81" id="HHS-Gm-PK6"/>
+                                            <constraint firstItem="cRt-Kq-2v8" firstAttribute="centerX" secondItem="7N3-lJ-zyv" secondAttribute="centerX" type="default" id="VNe-sY-jUF"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="leading" secondItem="7N3-lJ-zyv" secondAttribute="leading" constant="55" id="dk2-4X-qio"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="top" secondItem="7N3-lJ-zyv" secondAttribute="top" constant="75" id="nJ4-SL-k0B"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="cRt-Kq-2v8" id="GdG-Vz-s7K"/>
@@ -472,6 +972,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="vIv-qp-Vu1"/>
+        <segue reference="uS8-Z4-NsK"/>
+    </inferredMetricsTieBreakers>
 </document>

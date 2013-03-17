@@ -13,21 +13,23 @@
 
 -(NSMutableSet *) validColor:(Outfit *) outfit{
     NSMutableSet *possibilities = [[NSMutableSet alloc] initWithObjects:
-                                   [NSNumber numberWithInt: NAVY],
-                                   [NSNumber numberWithInt: BLACK],
-                                   [NSNumber numberWithInt: GRAY],
-                                   [NSNumber numberWithInt: CHARCOAL],
-                                   [NSNumber numberWithInt: BROWN],
-                                   [NSNumber numberWithInt: OLIVE],
-                                   [NSNumber numberWithInt: TAN],
+                                   @"NAVY",
+                                   @"BLACK",
+                                   @"GRAY",
+                                   @"CHARCOAL",
+                                   @"BROWN",
+                                   @"OLIVE",
+                                   @"TAN",
                                    nil];
+    [possibilities addObject:@"RANDOMCOLOR"];
     return possibilities;
 }
 -(NSMutableSet *) validPattern:(Outfit *) outfit{
     NSMutableSet *possibilities = [[NSMutableSet alloc] initWithObjects:
-                                   [NSNumber numberWithInt: PLAIN],
-                                   [NSNumber numberWithInt: PINSTRIPE],
+                                   @"PLAIN",
+                                   @"PINSTRIPE",
                                    nil];
+    [possibilities addObject:@"RANDOMPATTERN"];
     return possibilities;
 }
 

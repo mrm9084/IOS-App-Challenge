@@ -50,10 +50,10 @@
     NSArray *textArray = [[NSArray alloc] initWithObjects:
                           @"Place the bow tie around your neck, situating it so that end A is about two inches longer than end B.",
                           @"Cross end A over end B.",
-                          @"Bring end A up and under the loop.",
-                          @"Now double end B over itself to form the front base loop of the bow tie.",
+                          @"Bring end A up and under the loop and double end B over itself to form the front base loop of the bow tie.",
                           @"Loop end A over the center of the loop you just formed.",
                           @"Holding everything in place, double end A back on itself and poke it through the loop behind the bow tie.",
+                          @"Now pull on the doubled ends to tighten and finish the bow tie.",
                          nil];
     
     NSArray *imageArray = [[NSArray alloc] initWithObjects:

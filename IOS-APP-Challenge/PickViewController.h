@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Outfit.h"
 
 @interface PickViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
-@property (weak, nonatomic) IBOutlet UIPickerView *patternView;
-
+@property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
+@property (strong, nonatomic) NSNumber *page;
+@property (strong,nonatomic) Outfit *outfit;
 
 @end

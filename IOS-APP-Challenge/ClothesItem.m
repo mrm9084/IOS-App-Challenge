@@ -11,8 +11,15 @@
 
 @implementation ClothesItem
 
-@synthesize _Color = __Color;
-@synthesize _Pattern = __Pattern;
+@synthesize color = _Color;
+@synthesize pattern = _Pattern;
+
+- (NSString *)description{
+    NSString *description = [NSString stringWithFormat: @"%@ : ",[self class]];
+    description = [NSString stringWithFormat: @"%@ %@",description,_Color];
+    description = [NSString stringWithFormat: @"%@ , %@ \n",description,_Pattern];
+    return description;
+}
 
 -(NSMutableSet *) validColor:(Outfit *) outfit{
     return NULL;

@@ -35,5 +35,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(event.type == UIEventSubtypeMotionShake)
+    {
+        NSLog(@"called");
+        [self.view setBackgroundColor:[UIColor greenColor]];
+    }
+}
+
 
 @end

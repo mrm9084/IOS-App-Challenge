@@ -2,7 +2,7 @@
 //  PatternViewController.m
 //  IOS-APP-Challenge
 //
-//  Created by Adam Blaine on 3/15/13.
+//  Created by Mentor on 3/15/13.
 //  Copyright (c) 2013 Mentor. All rights reserved.
 //
 
@@ -13,6 +13,8 @@
 @end
 
 @implementation PatternViewController
+NSMutableArray *arraypatterns;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.patternView.delegate = self;
+    arraypatterns = [[NSMutableArray alloc] initWithObjects:
+                   @"solid",@"striped",  nil];
+    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +40,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -UIPickerView DataSource
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    return [arraypatterns count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [arraypatterns objectAtIndex:row];
+}
+
+
 
 @end

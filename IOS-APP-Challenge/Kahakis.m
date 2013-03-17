@@ -12,14 +12,16 @@
 
 -(NSMutableSet *) validColor:(Outfit *) outfit{
     NSMutableSet *possibilities = [[NSMutableSet alloc] initWithObjects:
-                                   [NSNumber numberWithInt: LIGHT],
-                                   [NSNumber numberWithInt: DARK],
+                                   @"LIGHT",
+                                   @"DARK",
                                    nil];
+    [possibilities addObject:@"RANDOMCOLOR"];
     return possibilities;
 }
 -(NSMutableSet *) validPattern:(Outfit *) outfit{
     NSMutableSet *possibilities = [[NSMutableSet alloc] initWithObjects:
                                    nil];
+    [possibilities addObject:@"RANDOMPATTERN"];
     return possibilities;
 }
 

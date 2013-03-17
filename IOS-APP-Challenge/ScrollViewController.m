@@ -42,22 +42,19 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 9;
+    return 6;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ScrollViewCell" forIndexPath:indexPath];
     NSArray *textArray = [[NSArray alloc] initWithObjects:
-                          @"Start with the wide end of your necktie on the right, extending about 12 inches below the narrow end on the left.",@"Then cross the wide end over the narrow end.", @"Bring the wide end around and behind the narrow end.", @"Then bring the wide end up.", @"Pull the wide end through the loop and to the right.", @"Bring the wide end around front, over the narrow end from right to left.", @"Again, bring the wide end up and through the loop.", @"Then, bring the wide end down through the knot in front.", @"And -- using both hands -- tighten the knot carefully and draw it up to the collar.", nil];
+                          @"Start with the wide end of your necktie on the right, extending about 12 inches below the narrow end on the left.", @"Then cross the wide end over the narrow end.", @"Bring the wide end around and behind the narrow end and turn back underneath", @"Pull the wide end through the loop and to the right and bring the wide end around front, over the narrow end from right to left.", @"Again, bring the wide end up and through the loop.", @"Then, bring the wide end down through the knot in front and using both hands, tighten the knot carefully and draw it up to the collar.", nil];
     NSArray *imageArray = [[NSArray alloc] initWithObjects:
                            [UIImage imageNamed:@"tie1.gif"],
                            [UIImage imageNamed:@"tie2.gif"],
                            [UIImage imageNamed:@"tie3.gif"],
                            [UIImage imageNamed:@"tie4.gif"],
                            [UIImage imageNamed:@"tie5.gif"],
-                           [UIImage imageNamed:@"tie6.gif"],
-                           [UIImage imageNamed:@"tie7.gif"],
-                           [UIImage imageNamed:@"tie8.gif"],
-                           [UIImage imageNamed:@"tie9.gif"],
+                           [UIImage imageNamed:@"tie6.gif "],
                            nil];
     
     cell.TextView.text= textArray[indexPath.row];
@@ -71,6 +68,19 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
+}
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(event.type == UIEventSubtypeMotionShake)
+    {
+        NSLog(@"called");
+        [self.collectionView setBackgroundColor:[UIColor greenColor]];
+    }
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
 }
 
 @end

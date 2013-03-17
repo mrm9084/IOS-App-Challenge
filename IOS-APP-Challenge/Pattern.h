@@ -11,6 +11,8 @@
 
 typedef enum{
     
+    NOPATTERN,
+    RANDOMPATTERN,
     LEATHER,
     PINSTRIPE,
     PLAID,

@@ -13,24 +13,25 @@
 -(NSMutableSet *) validColor:(Outfit *) outfit{
     NSMutableSet *possiblilities = [[outfit _PocketSquare] validColorForShirt:[outfit _Shirt]];
     [possiblilities intersectSet:[[outfit _PocketSquare] validColorForTies:[outfit _Ties]]];
+    [possiblilities addObject:@"RANDOMCOLOR"];
     return possiblilities;
 }
 
 -(NSMutableSet *) validColorForTies:(Ties *) ties{
     NSMutableSet *possibilities;
-    if (ties == NULL) {
+    if (![[ties color] isEqualToString: @"NOCOLOR"]) {
         possibilities = [[NSMutableSet alloc] initWithObjects:
-                         [NSNumber numberWithInt:[ties _Color]],
+                         [ties color],
                          nil];
     }else{
         possibilities = [[NSMutableSet alloc] initWithObjects:
-                          [NSNumber numberWithInt: BLACK],
-                          [NSNumber numberWithInt: WHITE],
-                          [NSNumber numberWithInt: BURGUNDY],
-                          [NSNumber numberWithInt: YELLOW],
-                          [NSNumber numberWithInt: SILVER],
-                          [NSNumber numberWithInt: BLUE],
-                          [NSNumber numberWithInt: GREEN],
+                          @"BLACK",
+                          @"WHITE",
+                          @"BURGUNDY",
+                          @"YELLOW",
+                          @"SILVER",
+                          @"BLUE",
+                          @"GREEN",
                           nil];
     }
     return possibilities;
@@ -38,102 +39,88 @@
 
 -(NSMutableSet *) validColorForShirt:(Shirt *) shirt{
     NSMutableSet *possiblilities;
-    if (shirt != NULL) {
-        Color shirtColor = [shirt _Color];
-        switch (shirtColor) {
-            case PINK:
-                 possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                   [NSNumber numberWithInt: BLACK],
-                                   [NSNumber numberWithInt: BURGUNDY],
-                                   [NSNumber numberWithInt: SILVER],
-                                   [NSNumber numberWithInt: BLUE],
-                                   nil];
-                break;
-            case LIGHTBLUE:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: WHITE],
-                                  [NSNumber numberWithInt: BURGUNDY],
-                                  [NSNumber numberWithInt: YELLOW],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  [NSNumber numberWithInt: GREEN],
-                                  nil];
-                break;
-            case WHITE:
-            case BLACK:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: WHITE],
-                                  [NSNumber numberWithInt: BURGUNDY],
-                                  [NSNumber numberWithInt: YELLOW],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  [NSNumber numberWithInt: GREEN],
-                                  nil];
-                break;
-            case YELLOW:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  nil];
-                break;
-            case LAVENDER:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  nil];
-                break;
-            case TEAL:
-            case RED:
-            case DARKPURPLE:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  nil];
-                break;
-            case AQUA:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  nil];
-                break;
-            case MINT:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: GREEN],
-                                  nil];
-                break;
-            case ROYALBLUE:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  nil];
-                break;
-            default:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: BLACK],
-                                  [NSNumber numberWithInt: WHITE],
-                                  [NSNumber numberWithInt: BURGUNDY],
-                                  [NSNumber numberWithInt: YELLOW],
-                                  [NSNumber numberWithInt: SILVER],
-                                  [NSNumber numberWithInt: BLUE],
-                                  [NSNumber numberWithInt: GREEN],
-                                  nil];
-                break;
+    if (![[shirt color] isEqualToString: @"NOCOLOR"]) {
+        NSString *shirtColor = [shirt color];
+        if ([shirtColor isEqualToString:@"PINK"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"BURGUNDY",
+                              @"SILVER",
+                              @"BLUE",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"LIGHTBLUE"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"WHITE",
+                              @"BURGUNDY",
+                              @"YELLOW",
+                              @"SILVER",
+                              @"BLUE",
+                              @"GREEN",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"WHITE"] || [shirtColor isEqualToString:@"BLACK"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"WHITE",
+                              @"BURGUNDY",
+                              @"YELLOW",
+                              @"SILVER",
+                              @"BLUE",
+                              @"GREEN",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"YELLOW"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              @"BLUE",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"LAVENDER"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"TEAL"] || [shirtColor isEqualToString:@"RED"] || [shirtColor isEqualToString:@"DARKPUTPLE"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"AQUA"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              @"BLUE",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"MINT"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              @"GREEN",
+                              nil];
+        }else if ([shirtColor isEqualToString:@"ROYALBLUE"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"SILVER",
+                              @"BLUE",
+                              nil];
+        }else{
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"BLACK",
+                              @"WHITE",
+                              @"BURGUNDY",
+                              @"YELLOW",
+                              @"SILVER",
+                              @"BLUE",
+                              @"GREEN",
+                              nil];
         }
     }else{
         possiblilities = [[NSMutableSet alloc] initWithObjects:
-                          [NSNumber numberWithInt: BLACK],
-                          [NSNumber numberWithInt: WHITE],
-                          [NSNumber numberWithInt: BURGUNDY],
-                          [NSNumber numberWithInt: YELLOW],
-                          [NSNumber numberWithInt: SILVER],
-                          [NSNumber numberWithInt: BLUE],
-                          [NSNumber numberWithInt: GREEN],
+                          @"BLACK",
+                          @"WHITE",
+                          @"BURGUNDY",
+                          @"YELLOW",
+                          @"SILVER",
+                          @"BLUE",
+                          @"GREEN",
                           nil];
     }
     return possiblilities;
@@ -141,35 +128,32 @@
 
 -(NSMutableSet *) validPattern:(Outfit *) outfit{
     NSMutableSet *possiblilities;
-    if ([outfit _Ties] != NULL) {
-        Pattern tiePattern = [[outfit _Ties] _Pattern];
-        switch (tiePattern) {
-            case PLAIN:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: PLAIN],
-                                  [NSNumber numberWithInt: STRIP],
-                                  [NSNumber numberWithInt: POCODOT],
-                                  [NSNumber numberWithInt: PLAID],
-                                  nil];
-                break;
-                
-            default:
-                possiblilities = [[NSMutableSet alloc] initWithObjects:
-                                  [NSNumber numberWithInt: SOLID],
-                                  [NSNumber numberWithInt: STRIP],
-                                  [NSNumber numberWithInt: POCODOT],
-                                  [NSNumber numberWithInt: PLAID],
-                                  nil];
-                break;
+    if (![[[outfit _Ties] pattern] isEqualToString: @"NOCOLOR"]) {
+        NSString *tiePattern = [[outfit _Ties] pattern];
+        if ([tiePattern isEqualToString:@"PLAIN"]) {
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"PLAIN",
+                              @"STRIP",
+                              @"POCODOT",
+                              @"PLAID",
+                              nil];
+        }else{
+            possiblilities = [[NSMutableSet alloc] initWithObjects:
+                              @"SOLID",
+                              @"STRIP",
+                              @"POCODOT",
+                              @"PLAID",
+                              nil];
         }
     }else{
         possiblilities = [[NSMutableSet alloc] initWithObjects:
-                          [NSNumber numberWithInt: PLAIN],
-                          [NSNumber numberWithInt: STRIP],
-                          [NSNumber numberWithInt: POCODOT],
-                          [NSNumber numberWithInt: PLAID],
+                          @"PLAIN",
+                          @"STRIP",
+                          @"POCODOT",
+                          @"PLAID",
                           nil];
     }
+    [possiblilities addObject:@"RANDOMPATTERN"];
     return possiblilities;
 }
 

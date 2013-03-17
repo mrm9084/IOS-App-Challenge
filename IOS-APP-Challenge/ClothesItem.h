@@ -12,9 +12,10 @@
 @class Outfit;
 
 @interface ClothesItem : NSObject
-    @property(assign,nonatomic) Color _Color;
-    @property(assign,nonatomic) Pattern _Pattern;
+    @property(assign,nonatomic) NSString *color;
+    @property(assign,nonatomic) NSString *pattern;
 
+- (NSString *)description;
 -(NSMutableSet *) validColor:(Outfit *) outfit;
 -(NSMutableSet *) validPattern:(Outfit *) outfit;
 

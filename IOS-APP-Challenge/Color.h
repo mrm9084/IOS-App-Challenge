@@ -11,6 +11,8 @@
 
 typedef enum{
     
+    NOCOLOR,
+    RANDOMCOLOR,
     AQUA,
     BLACK,
     BLUE,
