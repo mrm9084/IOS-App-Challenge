@@ -17,7 +17,12 @@
 - (NSString *)description{
     NSString *description = [NSString stringWithFormat: @"%@ : ",[self class]];
     description = [NSString stringWithFormat: @"%@ %@",description,_Color];
-    description = [NSString stringWithFormat: @"%@ , %@ \n",description,_Pattern];
+    if (![_Pattern isEqualToString:@"NOPATTERN"]) {
+        description = [NSString stringWithFormat: @"%@ , %@ \n",description,_Pattern];
+    }else{
+        description = [NSString stringWithFormat: @"%@ \n",description];
+    }
+    
     return description;
 }
 

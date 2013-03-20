@@ -22,8 +22,9 @@
 @synthesize _Blazer = blazer;
 @synthesize _DressPants = dressPants;
 @synthesize itemArray = itemArray;
+@synthesize suitType = _suitType;
 
--(id)init{
+-(id)initWithSuitType:(NSString *) suitType{
     if (self = [super init]) {
         suit = [[Suit alloc] init];
         [suit setColor:@"NOCOLOR"];
@@ -69,7 +70,21 @@
         [dressPants setColor:@"NOCOLOR"];
         [dressPants setPattern:@"NOPATTERN"];
         
-        itemArray = [[NSArray alloc] initWithObjects:
+        [self setSuitType:suitType];
+        
+        if ([suitType isEqualToString:@"Business"]) {
+            itemArray = [[NSArray alloc] initWithObjects:
+                        suit,
+                        ties,
+                        pocketSquare,
+                        shirt,
+                        belt,
+                        socks,
+                        shoes,
+                        nil];
+        }else{
+        
+            itemArray = [[NSArray alloc] initWithObjects:
                      suit,
                      jeans,
                      kahakis,
@@ -82,12 +97,14 @@
                      blazer,
                      dressPants,
                      nil];
+        }
     }
     return self;
 }
 
 - (NSString *)description {
     NSMutableString *description = [[NSMutableString alloc] init];
+    NSLog(@"HI there %@",[self suitType]);
     for (ClothesItem *item in itemArray) {
         description = [NSString stringWithFormat: @"%@%@",description,item.description];
     }

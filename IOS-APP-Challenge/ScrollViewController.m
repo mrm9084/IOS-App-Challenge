@@ -49,12 +49,12 @@
     NSArray *textArray = [[NSArray alloc] initWithObjects:
                           @"Start with the wide end of your necktie on the right, extending about 12 inches below the narrow end on the left.", @"Then cross the wide end over the narrow end.", @"Bring the wide end around and behind the narrow end and turn back underneath", @"Pull the wide end through the loop and to the right and bring the wide end around front, over the narrow end from right to left.", @"Again, bring the wide end up and through the loop.", @"Then, bring the wide end down through the knot in front and using both hands, tighten the knot carefully and draw it up to the collar.", nil];
     NSArray *imageArray = [[NSArray alloc] initWithObjects:
-                           [UIImage imageNamed:@"tie1.gif"],
-                           [UIImage imageNamed:@"tie2.gif"],
-                           [UIImage imageNamed:@"tie3.gif"],
-                           [UIImage imageNamed:@"tie4.gif"],
-                           [UIImage imageNamed:@"tie5.gif"],
-                           [UIImage imageNamed:@"tie6.gif "],
+                           [UIImage imageNamed:@"Tie1.png"],
+                           [UIImage imageNamed:@"Tie2.png"],
+                           [UIImage imageNamed:@"Tie3.png"],
+                           [UIImage imageNamed:@"Tie4.png"],
+                           [UIImage imageNamed:@"Tie5.png"],
+                           [UIImage imageNamed:@"Tie6.png"],
                            nil];
     
     cell.TextView.text= textArray[indexPath.row];

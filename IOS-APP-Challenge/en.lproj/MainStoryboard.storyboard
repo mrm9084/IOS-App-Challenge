@@ -622,7 +622,7 @@
         <scene sceneID="A6C-fc-0rK">
             <objects>
                 <viewController id="pSo-dm-g4d" customClass="PickViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fO9-ye-ifa">
+                    <view key="view" contentMode="scaleToFill" id="fO9-ye-ifa" customClass="swiperightview">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -649,9 +649,15 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="vKO-0q-SYx" appends="YES" id="KgE-BJ-RGV"/>
+                            <outletCollection property="gestureRecognizers" destination="A64-yd-hU2" appends="YES" id="c1E-Fu-tMf"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Business" id="ViB-mH-2ha">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="dsY-Tp-S6I">
+                            <connections>
+                                <action selector="goHome:" destination="pSo-dm-g4d" id="Lc8-6a-d09"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="A4c-OP-3vV">
                             <connections>
                                 <segue destination="RcZ-Of-8Cb" kind="push" identifier="Finish" id="uS8-Z4-NsK"/>
@@ -664,9 +670,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-Rn-gCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="A64-yd-hU2">
+                    <connections>
+                        <segue destination="pSo-dm-g4d" kind="push" identifier="OutfitSegueBackward" id="xju-59-bWb"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="vKO-0q-SYx">
                     <connections>
-                        <segue destination="pSo-dm-g4d" kind="push" identifier="OutfitSegue" id="6Fu-vf-llG"/>
+                        <segue destination="pSo-dm-g4d" kind="push" identifier="OutfitSegueForward" id="6Fu-vf-llG"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -772,15 +783,15 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-lH-Puw">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="7oh-Lf-HIV"/>
                                                         <constraint firstAttribute="height" constant="150" id="SVI-Lx-leT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hej-9Z-pvZ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="177" id="0XI-jp-tEB"/>
+                                                        <constraint firstAttribute="width" constant="150" id="6IK-Pf-HYE"/>
                                                         <constraint firstAttribute="height" constant="113" id="tiC-d2-f4b"/>
                                                     </constraints>
+                                                    <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -788,10 +799,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="hej-9Z-pvZ" firstAttribute="leading" secondItem="jVH-B7-a9h" secondAttribute="leading" constant="69" id="7Es-yL-BG7"/>
                                             <constraint firstItem="hej-9Z-pvZ" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="73" id="9Xe-ro-hBf"/>
-                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="236" id="IuB-lq-cjY"/>
-                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="centerX" secondItem="hej-9Z-pvZ" secondAttribute="centerX" type="default" id="Nft-5P-IqL"/>
+                                            <constraint firstItem="hej-9Z-pvZ" firstAttribute="leading" secondItem="jVH-B7-a9h" secondAttribute="leading" constant="83" id="HJP-3A-Qxn"/>
+                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="top" secondItem="jVH-B7-a9h" secondAttribute="top" constant="220" id="J75-pt-Iaj"/>
+                                            <constraint firstItem="hej-9Z-pvZ" firstAttribute="trailing" secondItem="DMf-lH-Puw" secondAttribute="trailing" type="default" id="RKA-G7-4vV"/>
+                                            <constraint firstItem="DMf-lH-Puw" firstAttribute="leading" secondItem="hej-9Z-pvZ" secondAttribute="leading" type="default" id="XiM-9u-K4F"/>
                                         </constraints>
                                         <size key="customSize" width="320" height="548"/>
                                         <connections>
@@ -860,11 +872,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Zuh-yg-g8B" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="44Q-e4-Lo4"/>
                                             <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="93" id="6Zb-4K-Hyo"/>
+                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="DSN-6R-gym"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="trailing" secondItem="Zuh-yg-g8B" secondAttribute="trailing" type="default" id="YWh-qi-Ucf"/>
-                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="top" secondItem="Wt5-s3-q8A" secondAttribute="top" constant="56" id="cL0-e9-E3x"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="leading" secondItem="Zuh-yg-g8B" secondAttribute="leading" type="default" id="eAo-dz-qJJ"/>
+                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="top" secondItem="Wt5-s3-q8A" secondAttribute="top" constant="71" id="jM3-rt-xdm"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="Zuh-yg-g8B" id="GrR-UR-eX9"/>
@@ -916,8 +928,8 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J35-JS-lxI">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="170" id="4Bj-iS-UUZ"/>
-                                                        <constraint firstAttribute="width" constant="201" id="Zft-AK-cub"/>
+                                                        <constraint firstAttribute="width" constant="150" id="TRx-S7-0sv"/>
+                                                        <constraint firstAttribute="height" constant="128" id="k3A-Hf-eXR"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -925,7 +937,6 @@
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRt-Kq-2v8">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="6WV-wd-0dc"/>
                                                         <constraint firstAttribute="height" constant="150" id="B1l-pz-nI2"/>
                                                     </constraints>
                                                 </imageView>
@@ -935,9 +946,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="cRt-Kq-2v8" secondAttribute="bottom" constant="81" id="HHS-Gm-PK6"/>
-                                            <constraint firstItem="cRt-Kq-2v8" firstAttribute="centerX" secondItem="7N3-lJ-zyv" secondAttribute="centerX" type="default" id="VNe-sY-jUF"/>
-                                            <constraint firstItem="J35-JS-lxI" firstAttribute="leading" secondItem="7N3-lJ-zyv" secondAttribute="leading" constant="55" id="dk2-4X-qio"/>
-                                            <constraint firstItem="J35-JS-lxI" firstAttribute="top" secondItem="7N3-lJ-zyv" secondAttribute="top" constant="75" id="nJ4-SL-k0B"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="leading" secondItem="cRt-Kq-2v8" secondAttribute="leading" type="default" id="cPw-v8-xZc"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="centerX" secondItem="7N3-lJ-zyv" secondAttribute="centerX" type="default" id="fgo-tQ-mf6"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="top" secondItem="7N3-lJ-zyv" secondAttribute="top" constant="70" id="jKf-a8-2Kd"/>
+                                            <constraint firstItem="J35-JS-lxI" firstAttribute="trailing" secondItem="cRt-Kq-2v8" secondAttribute="trailing" type="default" id="tuS-Ly-mTk"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="cRt-Kq-2v8" id="GdG-Vz-s7K"/>
@@ -969,6 +981,83 @@
         <image name="Icon-72@2x.png" width="144" height="144"/>
         <image name="button.png" width="2780" height="450"/>
     </resources>
+    <classes>
+        <class className="BowTieViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BowTieViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PickViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissView:"/>
+                <relationship kind="action" name="goHome:"/>
+                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="PocketViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="PocketViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="PresentOutfitViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresentOutfitViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="presentOutfit" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ScrollViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ScrollViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="view" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="swiperightview" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/swiperightview.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

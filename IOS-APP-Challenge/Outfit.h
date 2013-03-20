@@ -33,8 +33,10 @@
 @property(strong,nonatomic) Shirt *_Shirt;
 @property(strong,nonatomic) Blazer *_Blazer;
 @property(strong,nonatomic) DressPants *_DressPants;
+@property(strong,nonatomic) NSString *suitType;
 @property(strong,nonatomic) NSArray *itemArray;
 
+-(id) initWithSuitType: (NSString *) suitType;
 - (NSString *)description;
 -(void) completeOutfit;
 -(NSMutableSet *) getValidColorFor:(ClothesItem *) clothesItem;

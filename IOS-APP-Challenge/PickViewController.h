@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
 @property (strong, nonatomic) NSNumber *page;
 @property (strong,nonatomic) Outfit *outfit;
+- (IBAction)goHome:(id)sender;
+- (IBAction)dismissView:(id)sender;
+
 
 @end

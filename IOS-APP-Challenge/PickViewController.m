@@ -23,12 +23,20 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString: @"OutfitSegue"]) {
+    NSLog(@"%@",segue.identifier);
+    if ([segue.identifier isEqualToString: @"OutfitSegueForward"]) {
         
         PickViewController *vc = ((PickViewController *) segue.destinationViewController);
+        
         [vc setOutfit:[self outfit]];
         NSNumber *sum = [NSNumber numberWithInt:([[self page] intValue] + 1)];
         [vc setPage:sum];
+    }else if ([segue.identifier isEqualToString: @"OutfitSegueBackward"]){
+        PickViewController *vc = ((PickViewController *) segue.destinationViewController);
+        [vc setOutfit:[self outfit]];
+        NSNumber *sum = [NSNumber numberWithInt:([[self page] intValue] - 1)];
+        [vc setPage:sum];
+
     }else if ([segue.identifier isEqualToString:@"Finish"]){
         PresentOutfitViewController *vc = ((PresentOutfitViewController *) segue.destinationViewController);
         [vc setOutfit:[self outfit]];
@@ -38,7 +46,9 @@
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    if (!swipe && [identifier isEqualToString: @"OutfitSegue"]){
+    if (!swipe && ([identifier isEqualToString: @"OutfitSegueForward"])){
+        return false;
+    }else if ([identifier isEqualToString: @"OutfitSegueBackward"] && [self page].intValue <= 0){
         return false;
     }
     if ([identifier isEqualToString:@"Finish"]) {
@@ -60,8 +70,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([self outfit] == NULL){
-        [self setOutfit: [[Outfit alloc] init]];
+        if ([self outfit] == NULL){
+            [self setOutfit: [[Outfit alloc] initWithSuitType: [self navigationItem].title]];
     }
     
     
@@ -94,12 +104,14 @@
                                   nil];
     
     NSNumber *pageNumber = [self page];
-    
-    if (pageNumber.intValue >= [titles count] - 1) {
+    swipe = true;
+    if (pageNumber.intValue >= ((int)([titles count] - 1))) {
         pageNumber = [NSNumber numberWithInt:[titles count] - 1];
         swipe = false;
-    }else{
-        swipe = true;
+    }
+    if (pageNumber.intValue < 0){
+        pageNumber = [NSNumber numberWithInt:0];
+        swipe = false;
     }
    
     
@@ -177,9 +189,10 @@
     }
     [self pickerView:NULL didSelectRow:0 inComponent:0];
     // Do any additional setup after loading the view.
+    
+    [self.navigationItem setHidesBackButton:YES];
+    
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -246,4 +259,13 @@
     return [arraycolors objectAtIndex:row];
 }
 
+#pragma mark - back button behavior
+
+- (IBAction)goHome:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)dismissView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
 @end
