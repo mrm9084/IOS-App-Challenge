@@ -14,4 +14,5 @@
 @property(strong,nonatomic) Outfit *outfit;
 @property (weak, nonatomic) IBOutlet UITextView *presentOutfit;
 
+
 @end

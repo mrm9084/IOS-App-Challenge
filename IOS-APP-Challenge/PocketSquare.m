@@ -133,23 +133,23 @@
         if ([tiePattern isEqualToString:@"PLAIN"]) {
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"PLAIN",
-                              @"STRIP",
-                              @"POCODOT",
+                              @"STRIPE",
+                              @"POLKADOT",
                               @"PLAID",
                               nil];
         }else{
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"SOLID",
-                              @"STRIP",
-                              @"POCODOT",
+                              @"STRIPE",
+                              @"POLKADOT",
                               @"PLAID",
                               nil];
         }
     }else{
         possiblilities = [[NSMutableSet alloc] initWithObjects:
                           @"PLAIN",
-                          @"STRIP",
-                          @"POCODOT",
+                          @"STRIPE",
+                          @"POLKADOT",
                           @"PLAID",
                           nil];
     }

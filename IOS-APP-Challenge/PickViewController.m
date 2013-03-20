@@ -20,10 +20,24 @@
     NSArray *titles;
     bool type;
     bool swipe;
+    
+}
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (event.subtype == UIEventSubtypeMotionShake)
+    {
+        [[self outfit] completeOutfit];
+        [self performSegueWithIdentifier:@"Finish" sender:self];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"%@",segue.identifier);
+    
     if ([segue.identifier isEqualToString: @"OutfitSegueForward"]) {
         
         PickViewController *vc = ((PickViewController *) segue.destinationViewController);
@@ -70,6 +84,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view becomeFirstResponder];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];
         if ([self outfit] == NULL){
             [self setOutfit: [[Outfit alloc] initWithSuitType: [self navigationItem].title]];
     }
@@ -260,12 +276,21 @@
 }
 
 #pragma mark - back button behavior
-
 - (IBAction)goHome:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)dismissView:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)finish {
+    PresentOutfitViewController *vc = [[PresentOutfitViewController alloc]init];
+    [[self outfit] completeOutfit];
+    
+    vc.presentOutfit.text = self.outfit.description;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+ 
+}
+
 @end

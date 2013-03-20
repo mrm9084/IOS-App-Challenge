@@ -21,12 +21,12 @@
     NSMutableSet *possibilities;
     if(![[suit color] isEqualToString: @"NOCOLOR"]){
         NSString *suitColor = [suit color];
-        if ([suitColor isEqualToString:@""]) {
+        if ([suitColor isEqualToString:@"NAVY"]) {
             possibilities = [[NSMutableSet alloc] initWithObjects:
                              @"CORDOVAN",
                              @"BROWN",
                              nil];
-        }else if ([suitColor isEqualToString:@""]) {
+        }else if ([suitColor isEqualToString:@"Brown"]) {
             possibilities = [[NSMutableSet alloc] initWithObjects:
                              @"BROWN",
                              nil];

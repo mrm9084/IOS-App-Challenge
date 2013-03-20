@@ -146,34 +146,34 @@
         if ([pocketSquarePattern isEqualToString: @"PLAID"]) {
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"SOLID",
-                              @"STRIP",
-                              @"POCODOT",
+                              @"STRIPE",
+                              @"POLKADOT",
                               nil];
-        }else if ([pocketSquarePattern isEqualToString: @"POCODOT"]) {
+        }else if ([pocketSquarePattern isEqualToString: @"POLKADOT"]) {
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"SOLID",
-                              @"STRIP",
+                              @"STRIPE",
                               @"PLAID",
                               nil];
-        }else if ([pocketSquarePattern isEqualToString: @"STRIP"]) {
+        }else if ([pocketSquarePattern isEqualToString: @"STRIPE"]) {
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"SOLID",
-                              @"POCODOT",
+                              @"POLKADOT",
                               @"PLAID",
                               nil];
         }else{
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                               @"SOLID",
-                              @"STRIP",
-                              @"POCODOT",
+                              @"STRIPE",
+                              @"POLKADOT",
                               @"PLAID",
                               nil];
         }
     }else{
         possiblilities = [[NSMutableSet alloc] initWithObjects:
                           @"SOLID",
-                          @"STRIP",
-                          @"POCODOT",
+                          @"STRIPE",
+                          @"POLKADOT",
                           @"PLAID",
                           nil];
     }

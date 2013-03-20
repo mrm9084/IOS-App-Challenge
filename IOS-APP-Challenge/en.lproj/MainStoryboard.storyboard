@@ -200,8 +200,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-F4-yIG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-F4-yIG">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -622,7 +623,7 @@
         <scene sceneID="A6C-fc-0rK">
             <objects>
                 <viewController id="pSo-dm-g4d" customClass="PickViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fO9-ye-ifa" customClass="swiperightview">
+                    <view key="view" contentMode="scaleToFill" id="fO9-ye-ifa">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -672,7 +673,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-Rn-gCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="A64-yd-hU2">
                     <connections>
-                        <segue destination="pSo-dm-g4d" kind="push" identifier="OutfitSegueBackward" id="xju-59-bWb"/>
+                        <action selector="dismissView:" destination="pSo-dm-g4d" id="MGc-rO-Ind"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="vKO-0q-SYx">
@@ -872,11 +873,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="93" id="6Zb-4K-Hyo"/>
-                                            <constraint firstItem="eof-Ph-9lO" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="DSN-6R-gym"/>
+                                            <constraint firstItem="Zuh-yg-g8B" firstAttribute="centerX" secondItem="Wt5-s3-q8A" secondAttribute="centerX" type="default" id="YCD-h1-vfY"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="trailing" secondItem="Zuh-yg-g8B" secondAttribute="trailing" type="default" id="YWh-qi-Ucf"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="leading" secondItem="Zuh-yg-g8B" secondAttribute="leading" type="default" id="eAo-dz-qJJ"/>
                                             <constraint firstItem="eof-Ph-9lO" firstAttribute="top" secondItem="Wt5-s3-q8A" secondAttribute="top" constant="71" id="jM3-rt-xdm"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zuh-yg-g8B" secondAttribute="bottom" constant="78" id="n1E-Ug-Z6v"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="Zuh-yg-g8B" id="GrR-UR-eX9"/>
@@ -981,83 +982,6 @@
         <image name="Icon-72@2x.png" width="144" height="144"/>
         <image name="button.png" width="2780" height="450"/>
     </resources>
-    <classes>
-        <class className="BowTieViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BowTieViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BowTieViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PickViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissView:"/>
-                <relationship kind="action" name="goHome:"/>
-                <relationship kind="outlet" name="TitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="PocketViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PocketViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PocketViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="PresentOutfitViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresentOutfitViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="presentOutfit" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ScrollViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ScrollViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScrollViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="view" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="swiperightview" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/swiperightview.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

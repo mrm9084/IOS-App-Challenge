@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Outfit.h"
+#import "PresentOutfitViewController.h"
 
 @interface PickViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;

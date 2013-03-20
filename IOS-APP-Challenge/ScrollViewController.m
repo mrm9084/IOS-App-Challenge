@@ -69,14 +69,6 @@
 {
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
 }
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if(event.type == UIEventSubtypeMotionShake)
-    {
-        NSLog(@"called");
-        [self.collectionView setBackgroundColor:[UIColor greenColor]];
-    }
-}
 
 - (BOOL)canBecomeFirstResponder
 {

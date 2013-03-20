@@ -27,7 +27,7 @@
         if ([pattern isEqualToString:@"PLAIN"]) {
             possiblilities = [[NSMutableSet alloc] initWithObjects:
                             @"STRIP",
-                            @"POCODOT",
+                            @"POLKADOT",
                             @"PLAID",
                             nil];
         }else{
@@ -39,7 +39,7 @@
         possiblilities = [[NSMutableSet alloc] initWithObjects:
                         @"PLAIN",
                         @"STRIP",
-                        @"POCODOT",
+                        @"POLKADOT",
                         @"PLAID",
                         nil];
     }

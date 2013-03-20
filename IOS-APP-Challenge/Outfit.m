@@ -104,9 +104,9 @@
 
 - (NSString *)description {
     NSMutableString *description = [[NSMutableString alloc] init];
-    NSLog(@"HI there %@",[self suitType]);
+    
     for (ClothesItem *item in itemArray) {
-        description = [NSString stringWithFormat: @"%@%@",description,item.description];
+        description = [NSString stringWithFormat: @"%@%@\n",description,item.description];
     }
     return description;
 }
@@ -123,14 +123,14 @@
         if ([[item color] isEqualToString: @"NOCOLOR"] || [[item color] isEqualToString: @"RANDOMCOLOR"]) {
             NSMutableSet *validOutfit = [self getValidPatternFor:item];
             NSMutableArray *arrayPatterns = [NSMutableArray arrayWithArray:[validOutfit allObjects]];
-            NSLog(@"second %d",[arrayPatterns count]);
+            
             NSNumber *size = [[NSNumber alloc] initWithInt:[arrayPatterns count]];
-            NSLog(@"%d",size.intValue);
+            
             NSString *patternString = arrayPatterns[(arc4random() % size.intValue)];
             [item setPattern:patternString];
         }
     }
-    NSLog(@"%@",self);
+ 
 }
 
 -(NSMutableSet*) getValidColorFor:(ClothesItem *)clothesItem{

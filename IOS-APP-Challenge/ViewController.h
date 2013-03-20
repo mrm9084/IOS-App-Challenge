@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PickViewController.h"
+#import "PresentOutfitViewController.h"
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *view;
 

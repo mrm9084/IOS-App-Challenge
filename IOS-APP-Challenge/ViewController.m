@@ -14,11 +14,15 @@
 @end
 
 @implementation ViewController
+-(BOOL)canBecomeFirstResponder{
+    return true;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];
+   
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

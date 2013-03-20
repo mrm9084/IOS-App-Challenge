@@ -7,6 +7,8 @@
 //
 
 #import "PresentOutfitViewController.h"
+#import "PickViewController.h"
+
 
 @interface PresentOutfitViewController ()
 
@@ -21,6 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         // Custom initialization
     }
     return self;
@@ -29,8 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];
     NSString *description = _outfit.description;
     [[self presentOutfit] setText:description];
+    self.presentOutfit.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"back.png"]]];
+    
 	// Do any additional setup after loading the view.
 }
 
