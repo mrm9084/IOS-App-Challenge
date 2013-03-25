@@ -24,6 +24,7 @@
 @synthesize itemArray = itemArray;
 @synthesize suitType = _suitType;
 
+
 -(id)initWithSuitType:(NSString *) suitType{
     if (self = [super init]) {
         suit = [[Suit alloc] init];
@@ -140,4 +141,5 @@
 -(NSMutableSet *) getValidPatternFor:(ClothesItem *)clothesItem{
     return [clothesItem validPattern: self];
 }
+
 @end
